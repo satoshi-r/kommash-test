@@ -2,7 +2,6 @@ const gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	browserSync = require('browser-sync'),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify-es').default,
 	cleancss = require('gulp-clean-css'),
 	autoprefixer = require('gulp-autoprefixer'),
 	webp = require('gulp-webp'),
@@ -28,10 +27,13 @@ const webpackConfig = {
 				loader: 'babel-loader',
 				exclude: '/node_modules/'
 			}]
-		},
-		mode: isDev ? 'development' : 'production',
-		devtool: isDev ? 'source-map' : 'none'
-	};
+	},
+	mode: isDev ? 'development' : 'production',
+	devtool: isDev ? 'source-map' : 'none',
+	optimization: {
+		minimize: !isDev
+	}
+};
 
 const bsReload = (done => {
 	browserSync.reload();
@@ -52,20 +54,20 @@ gulp.task('browser-sync', () => {
 
 
 
-// Custom Styles
-gulp.task('styles', () => {
-	return gulp.src('src/sass/**/*.sass')
+// Styles
+gulp.task('styles:page', () => {
+	return gulp.src(['src/sass/page/**/*.sass', 'src/scss/page/**/*.scss'])
 		.pipe(sass({
 			outputStyle: 'expanded',
 			includePaths: [__dirname + '/node_modules']
 		}))
 		.on('error', notify.onError((err) => {
 			return {
-				title: 'Sass',
+				title: 'Styles',
 				message: err.message
 			}
 		}))
-		.pipe(concat('styles.min.css'))
+		.pipe(concat('styles.css'))
 		.pipe(autoprefixer({
 			grid: true,
 			overrideBrowserslist: ['last 10 versions']
@@ -77,7 +79,35 @@ gulp.task('styles', () => {
 				}
 			}
 		})) // Optional. Comment out when debugging
-		.pipe(gulp.dest('src/css'))
+		.pipe(gulp.dest('src'))
+		.pipe(browserSync.stream())
+});
+
+gulp.task('styles:template', () => {
+	return gulp.src(['src/sass/template/**/*.sass', 'src/scss/template/**/*.scss'])
+		.pipe(sass({
+			outputStyle: 'expanded',
+			includePaths: [__dirname + '/node_modules']
+		}))
+		.on('error', notify.onError((err) => {
+			return {
+				title: 'Styles',
+				message: err.message
+			}
+		}))
+		.pipe(concat('template_styles.css'))
+		.pipe(autoprefixer({
+			grid: true,
+			overrideBrowserslist: ['last 10 versions']
+		}))
+		.pipe(cleancss({
+			level: {
+				1: {
+					specialComments: 0
+				}
+			}
+		})) // Optional. Comment out when debugging
+		.pipe(gulp.dest('src'))
 		.pipe(browserSync.stream())
 });
 
@@ -134,52 +164,16 @@ gulp.task('code', () => {
 		}))
 });
 
-// Build
-gulp.task('css:build', () => {
-	return gulp.src('src/css/*.css')
-		.pipe(gulp.dest('dist/css'))
-});
-
-gulp.task('js:build', () => {
-	return gulp.src('src/js/scripts.min.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('dist/js/'))
-});
-
-gulp.task('html:build', () => {
-	return gulp.src('src/*.{html,htaccess,access}')
-		.pipe(gulp.dest('dist/'))
-});
-
-gulp.task('img:build', () => {
-	return gulp.src('src/img/*.{png,jpg,jpeg,webp,raw,ico,svg}')
-		.pipe(gulp.dest('dist/img/'))
-});
-
-// Static
-gulp.task('static:build', () => {
-	return gulp.src('src/static/**/*')
-		.pipe(gulp.dest('dist/static'))
-})
-
-gulp.task('fonts:build', () => {
-	return gulp.src(['src/fonts/*', '!src/fonts/_src/**'])
-		.pipe(gulp.dest('dist/fonts/'))
-});
-
-// Delete build
-gulp.task('clean:build', () => {
-	return del('dist')
-});
-
-gulp.task('build', gulp.series('clean:build', gulp.parallel('css:build', 'js:build', 'html:build', 'static:build', 'img:build', 'fonts:build')));
-
 // Watch
 gulp.task('watch', () => {
-	gulp.watch('src/sass/**/*.sass', gulp.parallel('styles'));
+	gulp.watch(['src/sass/page/**/*.sass', 'src/scss/page/**/*.scss'], gulp.parallel('styles:page'));
+	gulp.watch(['src/sass/template/**/*.sass', 'src/scss/template/**/*.scss'], gulp.parallel('styles:template'));
 	gulp.watch(['src/js/*.js', '!src/js/scripts.min.js'], gulp.parallel('scripts'));
 	gulp.watch('src/*.html', gulp.parallel('code'));
 	gulp.watch('src/img/_src/**/*', gulp.parallel('img'));
 });
 
-gulp.task('default', gulp.parallel('img', 'styles', 'scripts', 'browser-sync', 'watch'));
+
+gulp.task('build', gulp.parallel('scripts'))
+
+gulp.task('default', gulp.parallel('img', 'styles:page', 'styles:template', 'scripts', 'browser-sync', 'watch'));
