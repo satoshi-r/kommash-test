@@ -31,7 +31,7 @@ const webpackConfig = {
 	mode: isDev ? 'development' : 'production',
 	devtool: isDev ? 'source-map' : 'none',
 	optimization: {
-		minimize: !isDev
+		minimize: true
 	}
 };
 
@@ -56,14 +56,18 @@ gulp.task('browser-sync', () => {
 
 // Styles
 gulp.task('styles:page', () => {
-	return gulp.src(['src/sass/page/**/*.sass', 'src/scss/page/**/*.scss'])
+	return gulp.src([
+		'scss/page/base/**/*.scss',
+		'scss/page/**/*.scss'
+	])
+		.pipe(concat('styles.scss'))
 		.pipe(sass({
 			outputStyle: 'expanded',
 			includePaths: [__dirname + '/node_modules']
 		}))
 		.on('error', notify.onError((err) => {
 			return {
-				title: 'Styles',
+				title: 'styles-page',
 				message: err.message
 			}
 		}))
@@ -84,14 +88,19 @@ gulp.task('styles:page', () => {
 });
 
 gulp.task('styles:template', () => {
-	return gulp.src(['src/sass/template/**/*.sass', 'src/scss/template/**/*.scss'])
+	return gulp.src([
+		'scss/template/vendors/**/*.scss',
+		'scss/template/base/**/*.scss',
+		'scss/template/**/*.scss'
+	])
+		.pipe(concat('template_styles.scss'))
 		.pipe(sass({
 			outputStyle: 'expanded',
 			includePaths: [__dirname + '/node_modules']
 		}))
 		.on('error', notify.onError((err) => {
 			return {
-				title: 'Styles',
+				title: 'styles-template',
 				message: err.message
 			}
 		}))
@@ -166,8 +175,8 @@ gulp.task('code', () => {
 
 // Watch
 gulp.task('watch', () => {
-	gulp.watch(['src/sass/page/**/*.sass', 'src/scss/page/**/*.scss'], gulp.parallel('styles:page'));
-	gulp.watch(['src/sass/template/**/*.sass', 'src/scss/template/**/*.scss'], gulp.parallel('styles:template'));
+	gulp.watch('src/scss/page/**/*.scss', gulp.parallel('styles:page'));
+	gulp.watch('src/scss/template/**/*.scss', gulp.parallel('styles:template'));
 	gulp.watch(['src/js/*.js', '!src/js/scripts.min.js'], gulp.parallel('scripts'));
 	gulp.watch('src/*.html', gulp.parallel('code'));
 	gulp.watch('src/img/_src/**/*', gulp.parallel('img'));
