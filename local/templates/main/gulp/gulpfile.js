@@ -19,7 +19,7 @@ const gulp = require('gulp'),
 const isDev = process.env.NODE_ENV == 'development';
 
 const src = '../';
-
+const phpPaths = '../../../../**/*.php';
 const webpackConfig = {
 	output: {
 		filename: 'scripts.min.js'
@@ -43,9 +43,6 @@ const webpackConfig = {
 	}
 };
 
-console.log('DIRNAME: ', __dirname);
-
-
 const bsReload = (done => {
 	browserSync.reload();
 	done();
@@ -54,9 +51,7 @@ const bsReload = (done => {
 // Local Server
 gulp.task('browser-sync', () => {
 	browserSync({
-		server: {
-			baseDir: src
-		},
+		proxy: 'new-bx-project',
 		notify: false,
 	})
 });
@@ -174,7 +169,7 @@ gulp.task('cleanimg', () => {
 
 // Code & Reload
 gulp.task('code', () => {
-	return gulp.src([src + '**/*.html', '!node_modules/**/*'])
+	return gulp.src(phpPaths)
 		.pipe(browserSync.reload({
 			stream: true
 		}))
@@ -186,9 +181,11 @@ gulp.task('watch', () => {
 	gulp.watch(src + 'scss/template/**/*.scss', gulp.parallel('styles:template'));
 	gulp.watch([src + 'js/*.js', `!${src}js/scripts.min.js`], gulp.parallel('scripts'));
 	gulp.watch(src + '*.html', gulp.parallel('code'));
+	gulp.watch(phpPaths, gulp.parallel('code'))
 	gulp.watch(src + 'img/_src/**/*', gulp.parallel('img'));
 });
 
+console.log(phpPaths);
 
 gulp.task('build', gulp.parallel('scripts'))
 
