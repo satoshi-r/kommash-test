@@ -1,5 +1,4 @@
-import divide from './divide.js'
-
+import divide from './divide'
 console.log(divide(6, 2))
 
 // Остановить анимацию во время изменения размера окна
