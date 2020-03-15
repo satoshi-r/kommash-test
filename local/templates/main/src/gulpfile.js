@@ -18,7 +18,7 @@ const gulp = require('gulp'),
 
 const isDev = process.env.NODE_ENV == 'development';
 
-const src = '../';
+const src = './';
 const phpPaths = '../../../../**/*.php';
 const webpackConfig = {
 	output: {
@@ -51,7 +51,7 @@ const bsReload = (done => {
 // Local Server
 gulp.task('browser-sync', () => {
 	browserSync({
-		proxy: 'new-bx-project',
+		proxy: 'bx-new-template',
 		notify: false,
 	})
 });
@@ -85,7 +85,7 @@ gulp.task('styles:page', () => {
 				}
 			}
 		})) // Optional. Comment out when debugging
-		.pipe(gulp.dest(src))
+		.pipe(gulp.dest('../'))
 		.pipe(browserSync.stream())
 });
 
@@ -118,7 +118,7 @@ gulp.task('styles:template', () => {
 				}
 			}
 		})) // Optional. Comment out when debugging
-		.pipe(gulp.dest(src))
+		.pipe(gulp.dest('../'))
 		.pipe(browserSync.stream())
 });
 
@@ -129,7 +129,7 @@ gulp.task('scripts', () => {
 		.pipe(debug({
 			title: 'webpack'
 		}))
-		.pipe(gulp.dest(src + 'js'))
+		.pipe(gulp.dest('../js'))
 		.pipe(browserSync.reload({
 			stream: true
 		}))
@@ -137,7 +137,7 @@ gulp.task('scripts', () => {
 
 // Images
 gulp.task('images', async () => {
-	return gulp.src(src + 'img/_src/**/*.{png,jpg,jpeg,webp,raw,svg,gif}')
+	return gulp.src(src + 'img/**/*.{png,jpg,jpeg,webp,raw,svg,gif}')
 		.pipe(imagemin([
 	    imagemin.gifsicle({interlaced: true}),
 	    imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -149,20 +149,20 @@ gulp.task('images', async () => {
 	        ]
 	    })
     ]))
-		.pipe(newer(src + 'img'))
+		.pipe(newer('../img'))
 		.pipe(rename((path => path.extname = path.extname.replace('jpeg', 'jpg'))))
 		.pipe(clonesink) // start stream
 		.pipe(webp()) // convert images to webp and save a copy of the original format
 		.pipe(clonesink.tap()) // close stream
 		
-		.pipe(gulp.dest(src + 'img'))
+		.pipe(gulp.dest('../img'))
 });
 
 gulp.task('img', gulp.series('images', bsReload));
 
 // Clean IMG's
 gulp.task('cleanimg', () => {
-	return del([src + 'img/**/*', `!${src}img/_src`, `!${src}img/favicon.*`], {
+	return del([src + 'img/**/*', '!img/favicon.*'], {
 		force: true
 	})
 });
@@ -182,11 +182,8 @@ gulp.task('watch', () => {
 	gulp.watch([src + 'js/*.js', `!${src}js/scripts.min.js`], gulp.parallel('scripts'));
 	gulp.watch(src + '*.html', gulp.parallel('code'));
 	gulp.watch(phpPaths, gulp.parallel('code'))
-	gulp.watch(src + 'img/_src/**/*', gulp.parallel('img'));
+	gulp.watch(src + 'img/**/*', gulp.parallel('img'));
 });
 
-console.log(phpPaths);
-
 gulp.task('build', gulp.parallel('scripts'))
-
 gulp.task('default', gulp.parallel('img', 'styles:page', 'styles:template', 'scripts', 'browser-sync', 'watch'));
