@@ -171,6 +171,7 @@ gulp.task('code', () => {
 
 // Watch
 gulp.task('watch', () => {
+	gulp.watch(src + 'scss/vars.scss', gulp.parallel('styles:page', 'styles:template'));
 	gulp.watch(src + 'scss/page/**/*.scss', gulp.parallel('styles:page'));
 	gulp.watch(src + 'scss/template/**/*.scss', gulp.parallel('styles:template'));
 	gulp.watch([src + 'js/*.js', `!${src}js/scripts.min.js`], gulp.parallel('scripts'));
