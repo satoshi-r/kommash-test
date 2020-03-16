@@ -35,7 +35,7 @@ const webpackConfig = {
 	},
 	resolve: {
 		alias: {
-			'@': path.resolve(__dirname, 'node_modules')
+			'@': path.resolve(__dirname, 'js')
 		}
 	}
 };
