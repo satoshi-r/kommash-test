@@ -45,8 +45,23 @@ a {
 
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
 button {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    transition: .1s;
+
+    &:hover {
+        color: $accent;
+    }
 
     &:active,
     &:focus {
@@ -57,11 +72,11 @@ button {
 
 
 body {
-    font-size: 18px;
+    font-size: 16px;
     min-width: 320px;
     position: relative;
     line-height: 1.65;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Geometria', sans-serif;
     overflow-x: hidden;
     color: $text;
 }

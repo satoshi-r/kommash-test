@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="48px" viewBox="0 0 24 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Makets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18">
+            <g id="white" fill="#FFFFFF">
+                <polygon id="Path" points="0.686 21.9 21.9 0.685 23.315 2.1 2.1 23.314"></polygon>
+                <polygon id="Path" points="2.1 0.686 23.315 21.9 21.9 23.315 0.686 2.1"></polygon>
+            </g>
+            <g id="white-copy" transform="translate(0.000000, 24.000000)" fill="#009639">
+                <polygon id="Path" points="0.686 21.9 21.9 0.685 23.315 2.1 2.1 23.314"></polygon>
+                <polygon id="Path" points="2.1 0.686 23.315 21.9 21.9 23.315 0.686 2.1"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
