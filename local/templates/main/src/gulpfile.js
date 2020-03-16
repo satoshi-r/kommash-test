@@ -48,7 +48,7 @@ const bsReload = (done => {
 // Local Server
 gulp.task('browser-sync', () => {
 	browserSync({
-		proxy: 'bx-new-template',
+		proxy: 'kommash-test',
 		notify: false,
 	})
 });
