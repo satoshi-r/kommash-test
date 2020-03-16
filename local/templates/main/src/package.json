@@ -17,7 +17,6 @@
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.0",
 		"gulp-clean-css": "^4.2.0",
-		"gulp-clone": "^2.0.1",
 		"gulp-concat": "^2.6.1",
 		"gulp-debug": "^4.0.0",
 		"gulp-imagemin": "^7.1.0",
@@ -25,7 +24,6 @@
 		"gulp-notify": "^3.2.0",
 		"gulp-rename": "^1.4.0",
 		"gulp-sass": "^4.0.2",
-		"gulp-webp": "^4.0.1",
 		"imagemin-pngquant": "^8.0.0",
 		"webpack": "^4.41.6",
 		"webpack-stream": "^5.2.1"

@@ -4,9 +4,6 @@ const gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	cleancss = require('gulp-clean-css'),
 	autoprefixer = require('gulp-autoprefixer'),
-	webp = require('gulp-webp'),
-	clone = require('gulp-clone'),
-	clonesink = clone.sink(),
 	newer = require('gulp-newer'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
@@ -151,10 +148,6 @@ gulp.task('images', async () => {
     ]))
 		.pipe(newer('../img'))
 		.pipe(rename((path => path.extname = path.extname.replace('jpeg', 'jpg'))))
-		.pipe(clonesink) // start stream
-		.pipe(webp()) // convert images to webp and save a copy of the original format
-		.pipe(clonesink.tap()) // close stream
-		
 		.pipe(gulp.dest('../img'))
 });
 
