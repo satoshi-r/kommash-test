@@ -155,7 +155,7 @@ gulp.task('img', gulp.series('images', bsReload));
 
 // Clean IMG's
 gulp.task('cleanimg', () => {
-	return del([src + 'img/**/*', '!img/favicon.*'], {
+	return del(['../img/**/*', '!../img/favicon.*'], {
 		force: true
 	})
 });
