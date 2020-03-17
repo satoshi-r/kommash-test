@@ -20,16 +20,109 @@
         </div>
 
         <div class="header-menu">
-            <ul>
-                <li><a href="javascript:void(0)" class="header-menu__btn">О компании</a></li>
-                <li><a href="javascript:void(0)" class="header-menu__btn">Производство</a></li>
-                <li>
-                    <a href="/">
-                        <img src="<?php echo $path; ?>img/logo.svg" alt="logo">
-                    </a>
+            <ul class="header-menu__container">
+                <li class="header-menu__btn">
+                    О компании
+
+                    <div class="header-menu__dropdown">
+                        <ul>
+                            <li><a href="javascript:void(0)">История</a></li>
+                            <li><a href="javascript:void(0)">Новости</a></li>
+                            <li><a href="javascript:void(0)">Отзывы</a></li>
+                            <li><a href="javascript:void(0)">Документы</a></li>
+                            <li><a href="javascript:void(0)">Партнеры</a></li>
+                            <li><a href="javascript:void(0)">Кадровая политика</a></li>
+                            <li><a href="javascript:void(0)">Раскрытие информации</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li><a href="javascript:void(0)" class="header-menu__btn">Продукция</a></li>
-                <li><a href="javascript:void(0)" class="header-menu__btn">Сервис и запчасти</a></li>
+                <li class="header-menu__btn">
+                    Производство
+
+                    <div class="header-menu__dropdown">
+                        <ul>
+                            <li><a href="javascript:void(0)">Завод КОММАШ</a></li>
+                            <li><a href="javascript:void(0)">Технологии</a></li>
+                            <li><a href="javascript:void(0)">Бизнес-система</a></li>
+                        </ul>
+
+                    </div>
+                </li>
+
+                <a href="/">
+                    <img src="<?php echo $path; ?>img/logo.svg" alt="logo">
+                </a>
+
+                <li class="header-menu__btn">
+                    Продукция
+
+                    <div class="header-menu__dropdown menu-production">
+                        <ul>
+                            <li><a href="javascript:void(0)">Техника КОММАШ</a></li>
+                            <li><a href="javascript:void(0)">Техника в наличии</a></li>
+                            <li><a href="javascript:void(0)">Сравнение моделей</a></li>
+                            <li><a href="javascript:void(0)">Новые разработки</a></li>
+                            <li><a href="javascript:void(0)">Лизинговые программы</a></li>
+                        </ul>
+
+                        <div class="menu-production__container">
+                            <div class="menu-production__column">
+                                <a class="menu-production__item">
+                                    <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
+                                    Техника для ВКХ
+                                </a>
+                                <div class="header-menu__divider"></div>
+                                <ul>
+                                    <li><a href="javascript:void(0)">Каталог техники для ВКХ</a></li>
+                                    <li><a href="javascript:void(0)">Подробнее</a></li>
+                                    <li><a href="javascript:void(0)">Размывочные насадки</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="menu-production__column">
+                                <a class="menu-production__item">
+                                    <img src="<?php echo $path; ?>img/first/musor.png" alt="vkh">
+                                    Мусоровозы
+                                </a>
+                                <div class="header-menu__divider"></div>
+                                <ul>
+                                    <li><a href="javascript:void(0)">Каталог мусоровозов</a></li>
+                                    <li><a href="javascript:void(0)">Подробнее</a></li>
+                                    <li><a href="javascript:void(0)">Размывочные насадки</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="menu-production__column">
+                                <a class="menu-production__item">
+                                    <img src="<?php echo $path; ?>img/first/kdm.png" alt="vkh">
+                                    КДМ
+                                </a>
+                                <div class="header-menu__divider"></div>
+                                <ul>
+                                    <li><a href="javascript:void(0)">Каталог ВКХ</a></li>
+                                    <li><a href="javascript:void(0)">Подробнее</a></li>
+                                    <li><a href="javascript:void(0)">Опции КДМ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="header-menu__btn">
+                    Сервис и запчасти
+
+                    <div class="header-menu__dropdown">
+                        <ul>
+                            <li><a href="javascript:void(0)">Заказ запчастей</a></li>
+                            <li><a href="javascript:void(0)">Дилеры запчастей</a></li>
+                            <li><a href="javascript:void(0)">Сервисные центры</a></li>
+                            <li><a href="javascript:void(0)">Условия гарантии</a></li>
+                            <li>
+                                <div class="header-menu__divider"></div>
+                            </li>
+                            <li><a href="javascript:void(0)">Заявка на гарантийный ремонт</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
 
