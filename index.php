@@ -5,7 +5,7 @@
     <div class="header-bg"></div>
     <div class="header-container">
         <div class="header-btns">
-            <button class="header-btns__hamburger">
+            <button id="hamburger-menu" class="header-btns__hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -57,7 +57,7 @@
                     Продукция
 
                     <div class="header-menu__dropdown menu-production">
-                        <ul>
+                        <ul class="menu-production__list">
                             <li><a href="javascript:void(0)">Техника КОММАШ</a></li>
                             <li><a href="javascript:void(0)">Техника в наличии</a></li>
                             <li><a href="javascript:void(0)">Сравнение моделей</a></li>

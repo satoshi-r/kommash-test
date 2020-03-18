@@ -1,12 +1,24 @@
-import divide from './divide'
-console.log(divide(6, 2))
+import * as $ from 'jquery'
 
-// Остановить анимацию во время изменения размера окна
-let resizeTimer;
-window.addEventListener("resize", () => {
-    document.body.classList.add("resize-animation-stopper");
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        document.body.classList.remove("resize-animation-stopper");
-    }, 400);
+$(document).ready(function () {
+    $('.header-menu__btn').hover(function () {
+        $(this).find('.header-menu__dropdown').fadeToggle(200);
+    });
+
+    $('#hamburger-menu').click(function () {
+        $(this).toggleClass('menu-open');
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Остановить анимацию во время изменения размера окна
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+        document.body.classList.add("resize-animation-stopper");
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            document.body.classList.remove("resize-animation-stopper");
+        }, 400);
+    });
 });
