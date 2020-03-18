@@ -33,19 +33,7 @@ $(document).ready(function () {
         }
     });
 
-    // $('.opened').on('click', function (e) {
-    //     e.preventDefault();
-
-    //     if (!$(this).hasClass('accordeon-open')) {
-    //         $(this).parent().find('.hamburger-accordeon__list').slideUp(200);
-    //         $('.opened').removeClass('accordeon-open');
-
-    //         $(this).addClass('accordeon-open');
-    //         $(this).parent().find('.hamburger-accordeon__list').slideDown(200);
-    //     }
-
-    // });
-
+    // accordeon
     $('.hamburger-accordeon').on('click', function(e) {
         e.preventDefault();
     

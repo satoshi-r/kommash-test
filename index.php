@@ -10,7 +10,6 @@
     </label>
 </div>
 
-
 <header class="header green-header">
     <div class="header-bg"></div>
     <div class="header-container">
@@ -131,7 +130,7 @@
         </div>
 
         <div class="header-contacts">
-            <a href="tel:8 800 550 16 89">8 800 550 16 89</a>
+            <a href="tel:88005501689">8 800 550 16 89</a>
             <button class="header-contacts__btn">Все контакты</button>
         </div>
     </div>
@@ -196,6 +195,87 @@
                 <li><a href="javascript:void(0)">Кадровая политика</a></li>
                 <li><a href="javascript:void(0)">Раскрытие информации</a></li>
             </ul>
+        </div>
+        <div class="hamburger-column">
+            <div class="hamburger-title">Производство</div>
+            <ul class="hamburger-list">
+                <li><a href="javascript:void(0)">Завод КОММАШ</a></li>
+                <li><a href="javascript:void(0)">Технологии</a></li>
+                <li><a href="javascript:void(0)">Бизнес-система</a></li>
+            </ul>
+            <div class="hamburger-title">Сервис и&#160;запчасти</div>
+            <ul class="hamburger-list">
+                <li><a href="javascript:void(0)">Заказ запчастей</a></li>
+                <li><a href="javascript:void(0)">Дилеры запчастей</a></li>
+                <li><a href="javascript:void(0)">Сервисные центры</a></li>
+                <li><a href="javascript:void(0)">Условия гарантии</a></li>
+            </ul>
+            <div class="hamburger-divider"></div>
+            <a href="javascipt:void(0)" class="hamburger-request-btn">Заявка на&#160;гарантийный ремонт</a>
+        </div>
+        <div class="hamburger-column-prod">
+            <div class="hamburger-title">Продукция</div>
+            <ul class="hamburger-list">
+                <li><a href="javascript:void(0)">Техника КОММАШ</a></li>
+                <li><a href="javascript:void(0)">Сравнение моделей</a></li>
+                <li><a href="javascript:void(0)">Лизинговые программы</a></li>
+                <li><a href="javascript:void(0)">Техника в наличии</a></li>
+                <li><a href="javascript:void(0)">Новые разработки</a></li>
+            </ul>
+            <div class="hamburger-divider"></div>
+            <div class="hamburger-section">
+                <a href="javascript:void(0)" class="hamburger-section__left">
+                    <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
+                    Техника для ВКХ
+                </a>
+                <div class="hamburger-section__right">
+                    <a href="javascript:void(0)">Подробнее про технику для ВКХ</a>
+                    <a href="javascript:void(0)">Размывочные насадки</a>
+                </div>
+            </div>
+            <div class="hamburger-divider"></div>
+            <div class="hamburger-section">
+                <a href="javascript:void(0)" class="hamburger-section__left">
+                    <img src="<?php echo $path; ?>img/first/musor.png" alt="musor">
+                    Мусоровозы
+                </a>
+                <div class="hamburger-section__right">
+                    <a href="javascript:void(0)">Подробнее про мусоровозы</a>
+                </div>
+            </div>
+            <div class="hamburger-divider"></div>
+            <div class="hamburger-section">
+                <a href="javascript:void(0)" class="hamburger-section__left">
+                    <img src="<?php echo $path; ?>img/first/kdm.png" alt="kdm">
+                    Комбинированные дорожные машины
+                </a>
+                <div class="hamburger-section__right">
+                    <a href="javascript:void(0)">Подробнее про КДМ</a>
+                    <a href="javascript:void(0)">Опции КДМ</a>
+                </div>
+            </div>
+        </div>
+        <div class="hamburger-column-contacts">
+            <div class="hamburger-title">Контакты</div>
+            <a href="tel:88005501689" class="hamburger-tel">8 800 550 16 89</a>
+            <div class="hamburger-tel__caption">Звонок бесплатный</div>
+            <div class="hamburger-divider"></div>
+            <ul class="hamburger-list">
+                <li><a href="javascript:void(0)">Контактная информация</a></li>
+                <li><a href="javascript:void(0)">Как добраться</a></li>
+                <li><a href="javascript:void(0)">Обратная связь</a></li>
+            </ul>
+            <div class="hamburger-divider"></div>
+            <a class="hamburger-mail">Написать письмо</a>
+            <div class="hamburger-divider"></div>
+            <div class="hamburger-social">
+                <div class="hamburger-social__caption">Мы в соцсетях:</div>
+                <div class="hamburger-social__icons">
+                    <a href="javascript:void(0)"><img src="<?php echo $path; ?>img/icons/vk.svg" alt="vk"></a>
+                    <a href="javascript:void(0)"><img src="<?php echo $path; ?>img/icons/instagram.svg" alt="instagram"></a>
+                    <a href="javascript:void(0)"><img src="<?php echo $path; ?>img/icons/youtube.svg" alt="youtube"></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
