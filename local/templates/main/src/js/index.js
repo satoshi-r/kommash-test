@@ -1,15 +1,4 @@
-import * as $ from 'jquery'
-
-$(document).ready(function () {
-    $('.header-menu__btn').hover(function () {
-        $(this).find('.header-menu__dropdown').fadeToggle(200);
-    });
-
-    $('#hamburger-menu').click(function () {
-        $(this).toggleClass('menu-open');
-    });
-});
-
+import './header.js'
 
 document.addEventListener("DOMContentLoaded", () => {
     // Остановить анимацию во время изменения размера окна

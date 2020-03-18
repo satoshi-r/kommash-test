@@ -1,17 +1,20 @@
 <?php $path = "local/templates/main/"; ?>
-<?php include_once 'local/templates/main/header.php'; ?>
+<?php include_once "local/templates/main/header.php"; ?>
+
+<div class="hamburger-btn-wrap">
+    <button id="hamburger-btn">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+</div>
+
 
 <header class="header green-header">
     <div class="header-bg"></div>
     <div class="header-container">
-        <div class="header-btns">
-            <button id="hamburger-menu" class="header-btns__hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </button>
-
-            <button class="header-btns__search">
+        <div class="header-btn">
+            <button id="search-open" class="header-btn__search">
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
                     <path fill-rule="evenodd" d="M8.949 0c7.135 0 10.5 8.54 5.108 13.072l3.397 4.781c.564.794-.692 1.618-1.257.825l-3.377-4.755c-5.13 2.84-11.633-.713-11.633-6.466C1.188 3.34 4.662 0 8.95 0zm4.413 3.22C9.443-.544 2.71 2.134 2.71 7.457c0 5.325 6.732 8.003 10.653 4.239 2.437-2.34 2.437-6.136 0-8.476z" />
                 </svg>
@@ -131,11 +134,51 @@
             <button class="header-contacts__btn">Все контакты</button>
         </div>
     </div>
-
 </header>
 
 <section class="first">
 
 </section>
 
-<?php include_once 'local/templates/main/footer.php'; ?>
+<!-- search -->
+<div class="header-search">
+    <button id="search-close" class="header-search__close">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <g id="Makets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Group-18">
+                    <g id="svg-close">
+                        <path id="Path" d="M.686 21.9L21.9.685 23.315 2.1 2.1 23.314z" />
+                        <path id="Path" d="M2.1.686L23.315 21.9 21.9 23.315.686 2.1z" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </button>
+
+    <form action="javascript:void(0)" id="header-search">
+        <input type="search" name="search" id="header-search__input" placeholder="Поиск по сайту">
+        <img src="<?php echo $path; ?>img/icons/search.svg" alt="search">
+    </form>
+</div>
+<!-- end search -->
+
+<!-- hamburger -->
+<div class="hamburger">
+    <div class="hamburger-container">
+        <div class="hamburger-column">
+            <div class="hamburger-title">О компании</div>
+            <ul class="hamburger-list">
+                <li><a href="javascript:void(0)">История</a></li>
+                <li><a href="javascript:void(0)">Новости</a></li>
+                <li><a href="javascript:void(0)">Отзывы</a></li>
+                <li><a href="javascript:void(0)">Документы</a></li>
+                <li><a href="javascript:void(0)">Партнеры</a></li>
+                <li><a href="javascript:void(0)">Кадровая политика</a></li>
+                <li><a href="javascript:void(0)">Раскрытие информации</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- end hamburger -->
+
+<?php include_once "local/templates/main/footer.php"; ?>
