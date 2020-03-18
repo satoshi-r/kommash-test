@@ -33,19 +33,30 @@ $(document).ready(function () {
         }
     });
 
-
-
-    // function (e) {
+    // $('.opened').on('click', function (e) {
     //     e.preventDefault();
 
-    //     if (!$(this).hasClass('open')) {
-    //         $('.menu_column_list_item_submenu').slideUp(200);
-    //         $('.i_have_sub').removeClass('open');
+    //     if (!$(this).hasClass('accordeon-open')) {
+    //         $(this).parent().find('.hamburger-accordeon__list').slideUp(200);
+    //         $('.opened').removeClass('accordeon-open');
 
-
-    //         $(this).addClass('open');
-    //         $(this).parent().find('.menu_column_list_item_submenu').slideDown(200);
+    //         $(this).addClass('accordeon-open');
+    //         $(this).parent().find('.hamburger-accordeon__list').slideDown(200);
     //     }
 
-    // }
+    // });
+
+    $('.hamburger-accordeon').on('click', function(e) {
+        e.preventDefault();
+    
+        if($(this).closest('.accordeon-item').hasClass('accordeon-open')) {
+            $('.accordeon-item').removeClass('accordeon-open');
+        } else {
+            $('.accordeon-item').removeClass('accordeon-open');
+            $(this).closest('.accordeon-item').addClass('accordeon-open');
+        }
+        const $content = $(this).next();
+        $content.slideToggle(100);
+        $('.accordeon-item .hamburger-accordeon__list').not($content).slideUp('fast');
+    });
 });

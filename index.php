@@ -170,10 +170,29 @@
             <div class="hamburger-title">О компании</div>
             <ul class="hamburger-list">
                 <li><a href="javascript:void(0)">История</a></li>
-                <li><a href="javascript:void(0)">Новости</a></li>
-                <li><a href="javascript:void(0)">Отзывы</a></li>
-                <li><a href="javascript:void(0)">Документы</a></li>
-                <li><a href="javascript:void(0)">Партнеры</a></li>
+                <li class="accordeon-item">
+                    <a href="javascript:void(0)" class="hamburger-accordeon">Новости</a>
+                    <ul class="hamburger-accordeon__list">
+                        <li><a href="javascript:void(0)">События</a></li>
+                        <li><a href="javascript:void(0)">Публикации</a></li>
+                        <li><a href="javascript:void(0)">Новости компании</a></li>
+                    </ul>
+                </li>
+                <li class="accordeon-item">
+                    <a href="javascript:void(0)" class="hamburger-accordeon">Отзывы</a>
+                    <ul class="hamburger-accordeon__list">
+                        <li><a href="javascript:void(0)">О технике</a></li>
+                        <li><a href="javascript:void(0)">О компании</a></li>
+                    </ul>
+                </li>
+                <li class="accordeon-item">
+                    <a href="javascript:void(0)" class="hamburger-accordeon">Документы</a>
+                    <ul class="hamburger-accordeon__list">
+                        <li><a href="javascript:void(0)">Дипломы</a></li>
+                        <li><a href="javascript:void(0)">Сертификаты</a></li>
+                        <li><a href="javascript:void(0)">Благодарности</a></li>
+                    </ul>
+                </li>
                 <li><a href="javascript:void(0)">Кадровая политика</a></li>
                 <li><a href="javascript:void(0)">Раскрытие информации</a></li>
             </ul>

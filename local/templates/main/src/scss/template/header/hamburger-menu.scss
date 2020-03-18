@@ -16,7 +16,7 @@
     }
 
     &-column {
-        width: 150px;
+        width: 152px;
     }
 
     &-title {
@@ -34,8 +34,42 @@
             }
         }
     }
-}
 
+    &-accordeon {
+        display: inline-block;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            background: url('img/icons/caret-down.svg') no-repeat;
+            width: 10px;
+            height: 6px;
+            margin-left: 10px;
+            transition: all .1s ease;
+            will-change: transform;
+        }
+
+        &__list {
+            padding-left: 20px;
+            display: none;
+
+            li {
+                margin-bottom: 0;
+                a {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .accordeon-open {
+        .hamburger-accordeon:after {
+            transform: rotate(180deg);
+        }
+    }
+}
+// попроавить высоту
 .hamburger-btn-wrap {
     position: fixed;
     top: 28px;
