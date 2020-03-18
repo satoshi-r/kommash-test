@@ -2,11 +2,12 @@
 <?php include_once "local/templates/main/header.php"; ?>
 
 <div class="hamburger-btn-wrap">
-    <button id="hamburger-btn">
+    <input type="checkbox" id="hamburger-btn">
+    <label for="hamburger-btn">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
-    </button>
+    </label>
 </div>
 
 
