@@ -12,12 +12,39 @@ $(document).ready(function () {
         $(this).toggleClass('menu-open');
         if ($(this).hasClass('menu-open')) {
             hamburger.delay(150).fadeIn(200).addClass('hamburger-opened');
-            // hamburger.find('.hamburger-column').addClass('animated fadeInUp');
         } else {
             hamburger.fadeOut(200).removeClass('hamburger-opened');;
         }
     });
 
+    // accordeon
+    $('.hamburger-accordeon').on('click', function (e) {
+        e.preventDefault();
+
+        if ($(this).closest('.accordeon-item').hasClass('accordeon-open')) {
+            $('.accordeon-item').removeClass('accordeon-open');
+        } else {
+            $('.accordeon-item').removeClass('accordeon-open');
+            $(this).closest('.accordeon-item').addClass('accordeon-open');
+        }
+        const $content = $(this).next();
+        $content.slideToggle(100);
+        $('.accordeon-item .hamburger-accordeon__list').not($content).slideUp('fast');
+    });
+
+    // contacts
+    const contacts = $('.contacts');
+    $('.header-contacts__btn').click(function () {
+        $('.contacts').addClass('opened');
+    });
+
+    // $(document).on('click', function (e) {
+    //     if (e.target == contacts) {
+    //         return;
+    //     } else {
+    //         $('.contacts').removeClass('opened');
+    //     }
+    // });
     // search
     const search = $('.header-search');
     $('#search-open').click(function () {
@@ -35,18 +62,5 @@ $(document).ready(function () {
         }
     });
 
-    // accordeon
-    $('.hamburger-accordeon').on('click', function(e) {
-        e.preventDefault();
-    
-        if($(this).closest('.accordeon-item').hasClass('accordeon-open')) {
-            $('.accordeon-item').removeClass('accordeon-open');
-        } else {
-            $('.accordeon-item').removeClass('accordeon-open');
-            $(this).closest('.accordeon-item').addClass('accordeon-open');
-        }
-        const $content = $(this).next();
-        $content.slideToggle(100);
-        $('.accordeon-item .hamburger-accordeon__list').not($content).slideUp('fast');
-    });
+
 });

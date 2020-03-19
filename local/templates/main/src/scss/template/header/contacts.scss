@@ -1,0 +1,150 @@
+.contacts {
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 45px 30px;
+    background-color: #eeeeee;
+    color: $dark;
+    text-align: right;
+    z-index: 110;
+    will-change: transform;
+    transition: $transition;
+    transform: translateX(290px);
+
+    &-tel {
+        transform: translateY(30px);
+        opacity: 0;
+        transition: $transition;
+
+        a {
+            font-size: 24px;
+            color: $accent;
+            transition: $transition;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        &__caption {
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &-list {
+        margin-top: 20px;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: $transition;
+
+        li {
+            margin-bottom: 20px;
+
+            a {
+                color: $dark;
+                transition: $transition;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        li:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &-divider {
+        height: 2px;
+        background-color: #b7b7b7;
+    }
+
+    &-mail {
+        background: url('img/icons/mailtodo.svg') no-repeat;
+        background-color: $accent;
+        background-position: 14% 44%;
+        color: #fff !important;
+        display: flex;
+        align-items: center;
+        margin: 30px 0;
+        width: 100%;
+        height: 46px;
+        padding-left: 60px;
+        font-weight: 500;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: $transition;
+
+        &:hover {
+            background-color: #00712B;
+        }
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 20px;
+
+        &__icons {
+            margin-right: 5px;
+            margin-left: 10px;
+
+            svg {
+                path {
+                    transition: $transition;
+                }
+
+                .stroke {
+                    stroke: $dark;
+                }
+
+                .fill {
+                    fill: $dark;
+                }
+
+                &:hover {
+                    .stroke {
+                        stroke: $accent;
+                    }
+
+                    .fill {
+                        fill: $accent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contacts.opened {
+    transform: translateX(0);
+
+    .contacts {
+        &-tel,
+        &-tel__caption {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: .2s;
+        }
+
+        &-list {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: .25s;
+        }
+
+        &-mail {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: .3s;
+        }
+
+        
+    }
+}
