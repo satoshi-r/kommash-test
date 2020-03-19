@@ -35,16 +35,19 @@ $(document).ready(function () {
     // contacts
     const contacts = $('.contacts');
     $('.header-contacts__btn').click(function () {
-        $('.contacts').addClass('opened');
+        contacts.addClass('opened');
     });
 
-    // $(document).on('click', function (e) {
-    //     if (e.target == contacts) {
-    //         return;
-    //     } else {
-    //         $('.contacts').removeClass('opened');
-    //     }
-    // });
+    const closeContacts = e => {
+        if (!contacts.is(e.target) && contacts.has(e.target).length === 0) {
+            contacts.removeClass('opened');
+        }
+    }
+
+    $(document).mouseup(function(e){
+        closeContacts(e);
+    });
+
     // search
     const search = $('.header-search');
     $('#search-open').click(function () {

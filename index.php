@@ -304,7 +304,9 @@
         <li><a href="javascript:void(0)">Обратная связь</a></li>
     </ul>
     <div class="contacts-divider"></div>
-    <a class="contacts-mail">Написать письмо</a>
+    <div class="contacts-mail__wrap">
+        <a class="contacts-mail">Написать письмо</a>
+    </div>
     <div class="contacts-divider"></div>
     <div class="contacts-social">
         <div>Мы в соцсетях:</div>

@@ -76,12 +76,17 @@
         height: 46px;
         padding-left: 60px;
         font-weight: 500;
-        transform: translateY(30px);
-        opacity: 0;
+
         transition: $transition;
 
         &:hover {
             background-color: #00712B;
+        }
+
+        &__wrap {
+            transform: translateY(30px);
+            opacity: 0;
+            transition: $transition;
         }
     }
 
@@ -139,12 +144,11 @@
             transition-delay: .25s;
         }
 
-        &-mail {
+        &-mail__wrap {
             opacity: 1;
             transform: translateY(0);
             transition-delay: .3s;
         }
 
-        
     }
 }
