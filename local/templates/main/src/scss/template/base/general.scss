@@ -70,6 +70,23 @@ button {
     }
 }
 
+.btn {
+    color: #fff;
+    background-color: $accent;
+    border: 2px solid $accent;
+    height: 44px;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #00712B;
+        border-color: #00712B;
+        color: #fff;
+    }
+}
 
 body {
     font-size: 16px;
@@ -94,41 +111,3 @@ picture {
     transition: none !important;
 }
 
-
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
-}

@@ -148,6 +148,61 @@
     <h1>
         <p>лучшие</p> в своем деле
     </h1>
+
+    <ul class="slider-dots">
+        <li>
+            <button class="slider-dots__item">
+                <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
+                <p>Техника для ВКХ</p>
+            </button>
+        </li>
+        <li>
+            <button class="slider-dots__item">
+                <img src="<?php echo $path; ?>img/first/musor.png" alt="musor">
+                <p>Мусоровозы</p>
+            </button>
+        </li>
+        <li>
+            <button class="slider-dots__item">
+                <img src="<?php echo $path; ?>img/first/kdm.png" alt="kdm">
+                <p>Комбинированные дорожные машины</p>
+            </button>
+        </li>
+    </ul>
+
+    <div class="slider">
+        <div class="slider-item slider-item1">
+            <div class="slider-caption">
+                <div class="slider-caption__text">
+                    <p>
+                        до <span class="num">18</span> <br><b>метров</b> глубина очищаемого колодца
+                    </p>
+                </div>
+                <a href="javascript:void(0)" class="slider-caption__btn btn">Подробнее</a>
+            </div>
+        </div>
+        <div class="slider-item slider-item2">
+            <div class="slider-caption">
+                <div class="slider-caption__text">
+                    <p>
+                        до <span class="num">120</span> <b>контейнеров</b> в&#160;один мусоровоз
+                    </p>
+                </div>
+                <a href="javascript:void(0)" class="slider-caption__btn btn">Подробнее</a>
+            </div>
+        </div>
+        <div class="slider-item slider-item3">
+            <div class="slider-caption">
+                <div class="slider-caption__text">
+                    <div>Все виды работ</div>
+                    <p>
+                        по содержанию магистральных и городских дорог под потребности заказчика
+                    </p>
+                </div>
+                <a href="javascript:void(0)" class="slider-caption__btn btn">Подробнее</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- search -->

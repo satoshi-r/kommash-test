@@ -1,4 +1,5 @@
 import './header.js'
+import './first-slider'
 
 document.addEventListener("DOMContentLoaded", () => {
     // Остановить анимацию во время изменения размера окна

@@ -58,9 +58,9 @@ $(document).ready(function () {
         search.fadeOut(300);
     });
 
-    $(document).on('keydown', function (event) {
-        if (event.keyCode == 27) {
-            event.stopPropagation();
+    $(document).on('keydown', function (e) {
+        if (e.keyCode == 27) {
+            e.stopPropagation();
             search.fadeOut(300);
         }
     });
