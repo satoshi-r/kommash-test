@@ -225,7 +225,7 @@
     </button>
 
     <form action="javascript:void(0)" id="header-search">
-        <input type="search" name="search" id="header-search__input" placeholder="Поиск по сайту">
+        <input type="text" name="search" id="header-search__input" placeholder="Поиск по сайту">
         <img src="<?php echo $path; ?>img/icons/search.svg" alt="search">
     </form>
 </div>
