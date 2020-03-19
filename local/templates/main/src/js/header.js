@@ -6,6 +6,15 @@ $(document).ready(function () {
         $(this).find('.header-menu__dropdown').fadeToggle(200);
     });
 
+    //header
+    $(window).scroll(function(e) {
+        if(e.scrollTop > 0) {
+            $('.header-bg').show(300);
+        } else {
+            $('.header-bg').hide(300);
+        }
+    })
+
     // hamburger
     const hamburger = $('.hamburger');
     $('#hamburger-btn').click(function () {

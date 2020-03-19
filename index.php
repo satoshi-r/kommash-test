@@ -145,11 +145,11 @@
         </div>
     </a>
 
-    <h1>
+    <h1 class="fadeInDown">
         <p>лучшие</p> в своем деле
     </h1>
 
-    <ul class="slider-dots">
+    <ul class="slider-dots fadeInDown">
         <li>
             <button class="slider-dots__item">
                 <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
@@ -172,7 +172,7 @@
 
     <div class="slider">
         <div class="slider-item slider-item1">
-            <div class="slider-caption">
+            <div class="slider-caption fadeInRight">
                 <div class="slider-caption__text">
                     <p>
                         до <span class="num">18</span> <br><b>метров</b> глубина очищаемого колодца
@@ -203,6 +203,10 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="advantages">
+
 </section>
 
 <!-- search -->

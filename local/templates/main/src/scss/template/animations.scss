@@ -1,6 +1,19 @@
 .fadeInUp {
     animation-name: fadeInUp;
     animation-fill-mode: both;
+    will-change: transform, opacity;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
 }
 
 @keyframes fadeInUp {
@@ -12,5 +25,29 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
