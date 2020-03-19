@@ -1,5 +1,5 @@
 <?php $path = "local/templates/main/"; ?>
-<?php include_once "local/templates/main/header.php"; ?>
+<?php include_once $path . "header.php"; ?>
 
 <div class="hamburger-btn-wrap">
     <input type="checkbox" id="hamburger-btn">
@@ -137,7 +137,17 @@
 </header>
 
 <section class="first">
+    <a class="first-widget">
+        <img src="<?php echo $path; ?>img/first/widget-new.png" alt="widget">
+        <div class="first-widget__caption">
+            НОВИНКА!<br>
+            КДМ 96227-04
+        </div>
+    </a>
 
+    <h1>
+       <p>лучшие</p> в своем деле
+    </h1>
 </section>
 
 <!-- search -->
@@ -165,7 +175,7 @@
 <!-- hamburger -->
 <div class="hamburger">
     <div class="hamburger-container">
-        <div class="hamburger-column">
+        <div class="hamburger-column fadeInUp">
             <div class="hamburger-title">О компании</div>
             <ul class="hamburger-list">
                 <li><a href="javascript:void(0)">История</a></li>
@@ -196,7 +206,7 @@
                 <li><a href="javascript:void(0)">Раскрытие информации</a></li>
             </ul>
         </div>
-        <div class="hamburger-column">
+        <div class="hamburger-column fadeInUp">
             <div class="hamburger-title">Производство</div>
             <ul class="hamburger-list">
                 <li><a href="javascript:void(0)">Завод КОММАШ</a></li>
@@ -213,7 +223,7 @@
             <div class="hamburger-divider"></div>
             <a href="javascipt:void(0)" class="hamburger-request-btn">Заявка на&#160;гарантийный ремонт</a>
         </div>
-        <div class="hamburger-column-prod">
+        <div class="hamburger-column hamburger-column-prod fadeInUp">
             <div class="hamburger-title">Продукция</div>
             <ul class="hamburger-list">
                 <li><a href="javascript:void(0)">Техника КОММАШ</a></li>
@@ -255,7 +265,7 @@
                 </div>
             </div>
         </div>
-        <div class="hamburger-column-contacts">
+        <div class="hamburger-column hamburger-column-contacts fadeInUp">
             <div class="hamburger-title">Контакты</div>
             <a href="tel:88005501689" class="hamburger-tel">8 800 550 16 89</a>
             <div class="hamburger-tel__caption">Звонок бесплатный</div>
@@ -281,4 +291,4 @@
 </div>
 <!-- end hamburger -->
 
-<?php include_once "local/templates/main/footer.php"; ?>
+<?php include_once $path . "footer.php"; ?>

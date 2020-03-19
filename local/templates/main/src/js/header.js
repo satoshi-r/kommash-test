@@ -7,14 +7,16 @@ $(document).ready(function () {
     });
 
     // hamburger
+    const hamburger = $('.hamburger');
     $('#hamburger-btn').click(function () {
         $(this).toggleClass('menu-open');
         if ($(this).hasClass('menu-open')) {
-            $('.hamburger').fadeIn(200).delay(150)
+            hamburger.delay(150).fadeIn(200).addClass('hamburger-opened');
+            // hamburger.find('.hamburger-column').addClass('animated fadeInUp');
+        } else {
+            hamburger.fadeOut(200).removeClass('hamburger-opened');;
         }
     });
-
-
 
     // search
     const search = $('.header-search');
@@ -26,7 +28,7 @@ $(document).ready(function () {
         search.fadeOut(300);
     });
 
-    addEventListener("keydown", function (event) {
+    $(document).on('keydown', function (event) {
         if (event.keyCode == 27) {
             event.stopPropagation();
             search.fadeOut(300);

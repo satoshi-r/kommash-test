@@ -89,7 +89,7 @@ gulp.task('styles:page', () => {
 gulp.task('styles:template', () => {
 	return gulp.src([
 		src + 'scss/vars.scss',
-		src + 'scss/template/vendors/**/*.scss',
+		src + 'scss/template/vendors/**/*.{scss,css,sass}',
 		src + 'scss/template/base/**/*.scss',
 		src + 'scss/template/**/*.scss'
 	])
