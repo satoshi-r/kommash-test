@@ -7,11 +7,12 @@ $(document).ready(function () {
     });
 
     //header
-    $(window).scroll(function(e) {
-        if(e.scrollTop > 0) {
-            $('.header-bg').show(300);
+    const headerbg = $('.header-bg');
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 0) {
+            headerbg.fadeIn(200);
         } else {
-            $('.header-bg').hide(300);
+            headerbg.fadeOut(200);
         }
     })
 

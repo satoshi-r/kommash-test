@@ -1,0 +1,127 @@
+.advantages {
+    background-color: $dark;
+    width: 100%;
+    position: relative;
+
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &__img {
+            width: 100%;
+            display: block;
+        }
+
+        &__wrap {
+            width: 630px;
+            position: relative;
+            right: calc(50% - 482px);
+        }
+
+        &__title {
+            font-size: 66px;
+            color: $accent;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.06;
+            opacity: 0;
+            animation-duration: .8s;
+
+            span {
+                color: #fff;
+            }
+        }
+
+        &__lead {
+            font-size: 24px;
+            display: flex;
+            align-items: flex-end;
+            margin-top: -40px;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation-duration: .8s;
+
+            .num {
+                letter-spacing: -8px;
+                line-height: normal;
+                position: relative;
+                top: 32px;
+                z-index: 2;
+                color: $accent;
+                font-size: 150px;
+                font-weight: 300;
+            }
+
+            p {
+                margin-bottom: 0;
+                line-height: normal;
+                width: 210px;
+                position: relative;
+                left: -30px;
+
+                b {
+                    font-weight: 900;
+                }
+            }
+        }
+
+        &__text {
+            margin-bottom: 30px;
+            opacity: 0;
+            animation-duration: .8s;
+        }
+
+        &__btn {
+            color: #fff;
+            width: 144px;
+            opacity: 0;
+            animation-duration: .8s;
+        }
+    }
+
+    &-block2 {
+        z-index: 2;
+
+        .advantages-block {
+            &__wrap {
+                left: calc(50% - 580px);
+            }
+
+            &__lead {
+                p {
+                    width: 280px;
+                }
+
+                .num {
+                    z-index: 0;
+                }
+            }
+            
+            &__img {
+                width: auto;
+                height: 70%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &-block3 {
+        .advantages-block {
+            &__lead {
+                p {
+                    left: -10px;
+                }
+            }
+
+            &__btn {
+                width: 175px;
+            }
+
+            &__img {
+                margin-top: -200px;
+            }
+        }
+    }
+}

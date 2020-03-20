@@ -1,5 +1,7 @@
-import './header.js'
+import './header'
 import './first-slider'
+import './animations'
+import * as $ from 'jquery'
 
 document.addEventListener("DOMContentLoaded", () => {
     // Остановить анимацию во время изменения размера окна
@@ -11,4 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.remove("resize-animation-stopper");
         }, 400);
     });
+
+    // запрет на вытягивание картинок
+    $("img, a").on("dragstart", function (event) { event.preventDefault(); });
 });

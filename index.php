@@ -10,7 +10,7 @@
     </label>
 </div>
 
-<header class="header green-header">
+<header class="header black-header">
     <div class="header-bg"></div>
     <div class="header-container">
         <div class="header-btn">
@@ -203,10 +203,70 @@
             </div>
         </div>
     </div>
+
+    <img src="<?php echo $path; ?>img/icons/arrow-down.svg" alt="arrow-down" class="first-arrow-down">
 </section>
 
 <section class="advantages">
+    <div class="advantages-block advantages-block1">
+        <img src="<?php echo $path; ?>img/advantages/advantages-block1.png" class="advantages-block__img" alt="machine">
+        <div class="advantages-block__wrap">
+            <div class="advantages-block__title">
+                <span>Техника</span>
+                на&#160;любой вкус
+            </div>
+            <div>
+                <div class="advantages-block__lead">
+                    <div class="num">300</div>
+                    <p><b>единиц техники</b> в&#160;номенклатуре</p>
+                </div>
+                <div class="advantages-block__text">
+                    Товарный ассортимент предприятия насчитывает более 300 моделей коммунальных машин.
+                    Объемы производства коммунальной техники постоянно увеличиваются.
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="btn advantages-block__btn">В каталог</a>
+        </div>
+    </div>
 
+    <div class="advantages-block advantages-block2">
+        <div class="advantages-block__wrap">
+            <div class="advantages-block__title">
+                <span>отлаженное</span> производство
+            </div>
+            <div>
+                <div class="advantages-block__lead">
+                    <div class="num">20</div>
+                    <p><b>автомобилей за 1 день</b> максимальная мощность производства</p>
+                </div>
+                <div class="advantages-block__text">
+                    Мы&#160;постоянно совершенствуем процесс разработки и&#160;постановки техники на&#160;производство,
+                    что позволило нам увеличить объемы выпускаемой продукции.
+                </div>
+            </div>
+        </div>
+        <img src="<?php echo $path; ?>img/advantages/advantages-block2.png" class="advantages-block__img" alt="machine">
+    </div>
+
+    <div class="advantages-block advantages-block3">
+        <img src="<?php echo $path; ?>img/advantages/advantages-block3.png" class="advantages-block__img" alt="machine">
+        <div class="advantages-block__wrap">
+            <div>
+                <div class="advantages-block__lead">
+                    <div class="num">2</div>
+                    <p><b>гектара</b><br>или 25&#160;197&#160;м&#178; общая площадь цехов</p>
+
+                    <div class="num">4</div>
+                    <p><b>современных цеха</b> на&#160;территории завода</p>
+                </div>
+                <div class="advantages-block__text">
+                С&#160;2005 года на&#160;АО&#160;&#171;КОММАШ&#187; внедрены в&#160;производство LEAN&#38;KAIDZEN технологии, 
+                которые помогают нам создавать продукцию высокого качества с&#160;сохранением оптимальной цены для клиента.
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="btn advantages-block__btn">Производство</a>
+        </div>
+    </div>
 </section>
 
 <!-- search -->
