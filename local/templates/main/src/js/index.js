@@ -1,6 +1,7 @@
 import './header'
 import './first-slider'
 import './animations'
+import './test-drive'
 import * as $ from 'jquery'
 
 document.addEventListener("DOMContentLoaded", () => {

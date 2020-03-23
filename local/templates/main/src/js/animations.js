@@ -11,7 +11,14 @@ $(document).ready(function () {
         $('.advantages-block2 .advantages-block__text'),
         $('.advantages-block3 .advantages-block__lead'),
         $('.advantages-block3 .advantages-block__text'),
-        $('.advantages-block3 .advantages-block__btn')
+        $('.advantages-block3 .advantages-block__btn'),
+        $('.main-service-title'),
+        $('.main-service-text'),
+        $('.main-service-btn'),
+        $('.main-clients-title'),
+        $('.main-clients-desc'),
+        $('.main-clients-icons'),
+        $('.test-drive-container')
     ];
 
     $(window).scroll(function () {

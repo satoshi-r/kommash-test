@@ -292,6 +292,70 @@
         Мы сотрудничаем с крупнейшими поставщиками
         и&#160;мировыми лидерами производства автозапчастей.
     </div>
+    <div class="main-clients-icons">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients1.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients2.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients3.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients4.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients5.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients6.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients7.png" alt="client">
+        <img src="<?php echo $path; ?>img/main-clients/main-clients8.png" alt="client">
+    </div>
+</section>
+
+<section class="test-drive">
+    <div class="test-drive-container">
+        <div class="test-drive-column">
+            <h2 class="test-drive-title">
+                Убедитесь
+                сами на
+                <p>тест-драйве</p>
+            </h2>
+            <div class="test-drive-desc">
+                Если у&#160;вас остались вопросы, то&#160;запишитесь на&#160;тест-драйв
+                и&#160;ощутите на&#160;себе весь потенциал техники КОММАШ.
+            </div>
+        </div>
+        <div class="test-drive-column">
+            <form action="javascript:void(0)">
+                <label for="td_name" class="input">
+                    <input name="td_name" type="text" id="td_name" placeholder="&nbsp;">
+                    <span class="label">Имя</span>
+                    <span class="border"></span>
+                </label>
+
+                <label for="td_email" class="input">
+                    <input name="td_email" type="email" id="td_email" placeholder="&nbsp;">
+                    <span class="label">Эл.почта</span>
+                    <span class="border"></span>
+                    <div class="error_message"></div>
+                </label>
+
+                <label for="td_tel" class="input">
+                    <input name="td_tel" type="tel" id="td_tel" placeholder="&nbsp;">
+                    <span class="label">Телефон</span>
+                    <span class="border"></span>
+                    <div class="error_message"></div>
+                </label>
+
+                <label for="td_comment" class="input">
+                    <textarea name="td_comment" id="td_comment" placeholder="&nbsp;"></textarea>
+                    <span class="label">Комментарий</span>
+                    <span class="border"></span>
+                </label>
+
+                <div class="form-submit-wrap">
+                    <button type="submit" class="btn">Отправить</button>
+                    <span class="form-agreement">
+                        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
+                        и соглашаетесь с <a href="javascript:void(0)">политикой конфиденциальности</a>.
+                    </span>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </section>
 
 <!-- search -->

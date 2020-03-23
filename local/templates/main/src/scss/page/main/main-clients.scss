@@ -3,6 +3,7 @@
     position: relative;
     background-color: $dark_green;
     padding-top: 90px;
+    padding-bottom: 140px;
     text-align: center;
 
     &-title {
@@ -15,11 +16,35 @@
         font-weight: 900;
         color: $accent;
         margin-bottom: 20px;
+        opacity: 0;
+        animation-duration: .8s;
     }
 
     &-desc {
         width: 480px;
         text-align: center;
         margin: 0px auto;
+        margin-bottom: 30px;
+        opacity: 0;
+        animation-duration: .8s;
     }
+
+    &-icons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 1040px;
+        margin: 0px auto;
+        opacity: 0;
+        animation-duration: .8s;
+
+        img {
+            height: 150px;
+            width: 200px;
+            object-fit: cover;
+            margin: 0 30px;
+        }
+    }
+
 }

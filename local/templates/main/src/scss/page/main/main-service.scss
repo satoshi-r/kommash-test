@@ -15,6 +15,8 @@
         text-transform: uppercase;
         line-height: 70px;
         font-weight: 900;
+        opacity: 0;
+        animation-duration: .8s;
         p {
             color: $accent;
         }
@@ -27,6 +29,8 @@
         text-align: center;
         margin: 0px auto;
         margin-bottom: 25px;
+        opacity: 0;
+        animation-duration: .8s;
     }
 
     &-btn {
@@ -35,6 +39,8 @@
         display: block;
         width: 250px;
         margin: 0px auto;
+        opacity: 0;
+        animation-duration: .8s;
     }
 
     &-img {
