@@ -358,6 +358,20 @@
     </div>
 </section>
 
+<footer class="footer black-footer">
+    <div class="footer-group">
+        <span>© АО «КОММАШ», 2019</span>
+        <a href="javascript:void(0)">Политика конфиденциальности</a>
+    </div>
+    <div class="footer-group">
+        <span>Россия, г. Нижний Новгород, ул. Деловая, 5, а/я 50</span>
+        <a href="mailto:info@kommash.ru">info@kommash.ru</a>
+    </div>
+    <div class="footer-group">
+        <span>Сделано в «Воздухе»</span>
+    </div>
+</footer>
+
 <!-- search -->
 <div class="header-search">
     <button id="search-close" class="header-search__close">
