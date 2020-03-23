@@ -318,7 +318,7 @@
             </div>
         </div>
         <div class="test-drive-column">
-            <form action="javascript:void(0)">
+            <form action="mail.php" method="POST">
                 <label for="td_name" class="input">
                     <input name="td_name" type="text" id="td_name" placeholder="&nbsp;">
                     <span class="label">Имя</span>
@@ -352,8 +352,13 @@
                         и соглашаетесь с <a href="javascript:void(0)">политикой конфиденциальности</a>.
                     </span>
                 </div>
-
             </form>
+
+            <div class="test-drive-success">
+                <img src="<?php echo $path; ?>img/icons/checked.svg" alt="check">
+                <div class="test-drive-success__title">Отправлено !</div>
+                <p class="test-drive-success__caption">Когда-нибудь с Вами свяжутся.</p>
+            </div>
         </div>
     </div>
 </section>

@@ -15,6 +15,10 @@
 
     &-column {
         width: 520px;
+        height: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
     &-title {
@@ -30,6 +34,31 @@
 
     &-desc {
         width: 380px;
+    }
+
+    &-success {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+
+        img {
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 700;
+            color: $accent;
+        }
+
+        &__caption {
+            font-size: 14px;
+        }
     }
 
     form {
