@@ -1,0 +1,60 @@
+.head {
+    width: 100%;
+    height: 272px;
+    background-color: $dark_green;
+    padding-top: 90px;
+
+    &-container {
+        width: 760px;
+        display: flex;
+        margin: 0px auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-img {
+        margin-bottom: 5px;
+        width: 100%;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    &-title {
+
+        &:before {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            display: block;
+            transition: $transition;
+            margin-bottom: 5px;
+        }
+    }
+
+    &-item {
+        text-align: center;
+        width: 182px;
+
+        &:hover {
+            color: $text;
+            .head-title {
+                
+                &:before {
+                    width: 100%;
+                    
+                }
+            }
+        }
+    }
+
+    &-item.active {
+        .head-title {
+
+            &:before {
+                width: 100%;
+
+            }
+        }
+    }
+}

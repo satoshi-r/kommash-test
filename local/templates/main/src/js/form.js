@@ -121,11 +121,13 @@ $(document).ready(function () {
                     'comment': comment
                 },
                 dataType: 'html',
-                success: function () {
+                success: function (res) {
+                    console.log(res);
+                    
                     form.fadeOut(300, function () {
                         formSuccess.fadeIn(300).css('display', 'flex');
                     });
-                    
+
                     setTimeout(() => {
                         formSuccess.fadeOut(300, function () {
                             form.fadeIn(300);

@@ -1,4 +1,4 @@
-<?php $path = "local/templates/main/"; ?>
+<?php $path = "../../local/templates/main/"; ?>
 <?php include_once $path . "header.php"; ?>
 
 <div class="hamburger-btn-wrap">
@@ -10,7 +10,7 @@
     </label>
 </div>
 
-<header class="header black-header">
+<header class="header green-header">
     <div class="header-bg"></div>
     <div class="header-container">
         <div class="header-btn">
@@ -56,7 +56,7 @@
                     <img src="<?php echo $path; ?>img/logo.svg" alt="logo">
                 </a>
 
-                <li class="header-menu__btn">
+                <li class="header-menu__btn active">
                     Продукция
 
                     <div class="header-menu__dropdown menu-production">
@@ -70,7 +70,7 @@
 
                         <div class="menu-production__container">
                             <div class="menu-production__column">
-                                <a href="javascript:void(0)" class="menu-production__item">
+                                <a class="menu-production__item">
                                     <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
                                     Техника для ВКХ
                                 </a>
@@ -83,8 +83,8 @@
                             </div>
 
                             <div class="menu-production__column">
-                                <a href="catalog/musor/index.php" class="menu-production__item">
-                                    <img src="<?php echo $path; ?>img/first/musor.png" alt="musor">
+                                <a class="menu-production__item">
+                                    <img src="<?php echo $path; ?>img/first/musor.png" alt="vkh">
                                     Мусоровозы
                                 </a>
                                 <div class="header-menu__divider"></div>
@@ -96,8 +96,8 @@
                             </div>
 
                             <div class="menu-production__column">
-                                <a href="javascript:void(0)" class="menu-production__item">
-                                    <img src="<?php echo $path; ?>img/first/kdm.png" alt="kdm">
+                                <a class="menu-production__item">
+                                    <img src="<?php echo $path; ?>img/first/kdm.png" alt="vkh">
                                     КДМ
                                 </a>
                                 <div class="header-menu__divider"></div>
@@ -136,246 +136,51 @@
     </div>
 </header>
 
-<section class="first">
-    <a class="first-widget">
-        <img src="<?php echo $path; ?>img/first/widget-new.png" alt="widget">
-        <div class="first-widget__caption">
-            НОВИНКА!<br>
-            КДМ 96227-04
-        </div>
-    </a>
-
-    <h1 class="fadeInDown">
-        <p>лучшие</p> в своем деле
-    </h1>
-
-    <ul class="slider-dots fadeInDown">
-        <li>
-            <button class="slider-dots__item">
-                <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
-                <p>Техника для ВКХ</p>
-            </button>
-        </li>
-        <li>
-            <button class="slider-dots__item">
-                <img src="<?php echo $path; ?>img/first/musor.png" alt="musor">
-                <p>Мусоровозы</p>
-            </button>
-        </li>
-        <li>
-            <button class="slider-dots__item">
-                <img src="<?php echo $path; ?>img/first/kdm.png" alt="kdm">
-                <p>Комбинированные дорожные машины</p>
-            </button>
-        </li>
-    </ul>
-
-    <div class="slider">
-        <div class="slider-item slider-item1">
-            <div class="slider-caption fadeInRight">
-                <div class="slider-caption__text">
-                    <p>
-                        до <span class="num">18</span> <br><b>метров</b> глубина очищаемого колодца
-                    </p>
-                </div>
-                <a href="javascript:void(0)" class="slider-caption__btn btn">Подробнее</a>
+<section class="head">
+    <div class="head-container">
+        <a href="javascript:void(0)" class="head-item">
+            <img class="head-img" src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
+            <div class="head-title">
+                Техника для ВКХ
             </div>
-        </div>
-        <div class="slider-item slider-item2">
-            <div class="slider-caption">
-                <div class="slider-caption__text">
-                    <p>
-                        до <span class="num">120</span> <b>контейнеров</b> в&#160;один мусоровоз
-                    </p>
-                </div>
-                <a href="javascript:void(0)" class="slider-caption__btn btn">Подробнее</a>
+        </a>
+        <a href="javascript:void(0)" class="head-item active">
+            <img class="head-img" src="<?php echo $path; ?>img/first/musor.png" alt="musor">
+            <div class="head-title">
+                Мусоровозы
             </div>
-        </div>
-        <div class="slider-item slider-item3">
-            <div class="slider-caption">
-                <div class="slider-caption__text">
-                    <div>Все виды работ</div>
-                    <p>
-                        по содержанию магистральных и городских дорог под потребности заказчика
-                    </p>
-                </div>
-                <a href="javascript:void(0)" class="slider-caption__btn btn">Подробнее</a>
+        </a>
+        <a href="javascript:void(0)" class="head-item">
+            <img class="head-img" src="<?php echo $path; ?>img/first/kdm.png" alt="kdm">
+            <div class="head-title">
+                Комбинированные
+                дорожные машины
             </div>
-        </div>
-    </div>
-
-    <img src="<?php echo $path; ?>img/icons/arrow-down.svg" alt="arrow-down" class="first-arrow-down">
-</section>
-
-<section class="advantages">
-    <div class="advantages-block advantages-block1">
-        <img src="<?php echo $path; ?>img/advantages/advantages-block1.png" class="advantages-block__img" alt="machine">
-        <div class="advantages-block__wrap">
-            <div class="advantages-block__title">
-                <span>Техника</span>
-                на&#160;любой вкус
-            </div>
-            <div>
-                <div class="advantages-block__lead">
-                    <div class="num">300</div>
-                    <p><b>единиц техники</b> в&#160;номенклатуре</p>
-                </div>
-                <div class="advantages-block__text">
-                    Товарный ассортимент предприятия насчитывает более 300 моделей коммунальных машин.
-                    Объемы производства коммунальной техники постоянно увеличиваются.
-                </div>
-            </div>
-            <a href="javascript:void(0)" class="btn advantages-block__btn">В каталог</a>
-        </div>
-    </div>
-
-    <div class="advantages-block advantages-block2">
-        <div class="advantages-block__wrap">
-            <div class="advantages-block__title">
-                <span>отлаженное</span> производство
-            </div>
-            <div>
-                <div class="advantages-block__lead">
-                    <div class="num">20</div>
-                    <p><b>автомобилей за 1 день</b> максимальная мощность производства</p>
-                </div>
-                <div class="advantages-block__text">
-                    Мы&#160;постоянно совершенствуем процесс разработки и&#160;постановки техники на&#160;производство,
-                    что позволило нам увеличить объемы выпускаемой продукции.
-                </div>
-            </div>
-        </div>
-        <img src="<?php echo $path; ?>img/advantages/advantages-block2.png" class="advantages-block__img" alt="machine">
-    </div>
-
-    <div class="advantages-block advantages-block3">
-        <img src="<?php echo $path; ?>img/advantages/advantages-block3.png" class="advantages-block__img" alt="machine">
-        <div class="advantages-block__wrap">
-            <div>
-                <div class="advantages-block__lead">
-                    <div class="num">2</div>
-                    <p><b>гектара</b><br>или 25&#160;197&#160;м&#178; общая площадь цехов</p>
-
-                    <div class="num">4</div>
-                    <p><b>современных цеха</b> на&#160;территории завода</p>
-                </div>
-                <div class="advantages-block__text">
-                    С&#160;2005 года на&#160;АО&#160;&#171;КОММАШ&#187; внедрены в&#160;производство LEAN&#38;KAIDZEN технологии,
-                    которые помогают нам создавать продукцию высокого качества с&#160;сохранением оптимальной цены для клиента.
-                </div>
-            </div>
-            <a href="javascript:void(0)" class="btn advantages-block__btn">Производство</a>
-        </div>
+        </a>
     </div>
 </section>
 
-<section class="main-service">
-    <h2 class="main-service-title">
-        <p>безупречный сервис</p>
-        по&#160;всей России
-    </h2>
-
-    <div class="main-service-text">
-        АО&#160;&#171;КОММАШ&#187; оказывает услуги по&#160;гарантийному и&#160;постгарантийному обслуживанию, модернизации старой техники
-        и&#160;проводит техническое обслуживание машин в&#160;сервисных центрах на&#160;всей территории России.
-    </div>
-
-    <a href="javascript:void(0)" class="main-service-btn btn">Подробнее про сервис</a>
-    <div class="main-service-img__wrap">
-        <img src="<?php echo $path; ?>img/main-service/main-service-map.svg" class="main-service-img" alt="map">
-    </div>
-</section>
-
-<section class="main-clients">
-    <h2 class="main-clients-title">клиенты</h2>
-    <div class="main-clients-desc">
-        Мы сотрудничаем с крупнейшими поставщиками
-        и&#160;мировыми лидерами производства автозапчастей.
-    </div>
-    <div class="main-clients-icons">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients1.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients2.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients3.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients4.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients5.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients6.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients7.png" alt="client">
-        <img src="<?php echo $path; ?>img/main-clients/main-clients8.png" alt="client">
-    </div>
-</section>
-
-<section class="test-drive">
-    <div class="test-drive-container">
-        <div class="test-drive-column">
-            <h2 class="test-drive-title">
-                Убедитесь
-                сами на
-                <p>тест-драйве</p>
-            </h2>
-            <div class="test-drive-desc">
-                Если у&#160;вас остались вопросы, то&#160;запишитесь на&#160;тест-драйв
-                и&#160;ощутите на&#160;себе весь потенциал техники КОММАШ.
-            </div>
-        </div>
-        <div class="test-drive-column">
-            <form action="mail.php" method="POST">
-                <label for="td_name" class="input">
-                    <input name="td_name" type="text" id="td_name" placeholder="&nbsp;">
-                    <span class="label">Имя</span>
-                    <span class="border"></span>
-                </label>
-
-                <label for="td_email" class="input">
-                    <input name="td_email" type="email" id="td_email" placeholder="&nbsp;">
-                    <span class="label">Эл.почта</span>
-                    <span class="border"></span>
-                    <div class="error_message"></div>
-                </label>
-
-                <label for="td_tel" class="input">
-                    <input name="td_tel" type="tel" id="td_tel" placeholder="&nbsp;">
-                    <span class="label">Телефон</span>
-                    <span class="border"></span>
-                    <div class="error_message"></div>
-                </label>
-
-                <label for="td_comment" class="input">
-                    <textarea name="td_comment" id="td_comment" placeholder="&nbsp;"></textarea>
-                    <span class="label">Комментарий</span>
-                    <span class="border"></span>
-                </label>
-
-                <div class="form-submit-wrap">
-                    <button type="submit" class="btn">Отправить</button>
-                    <span class="form-agreement">
-                        Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
-                        и соглашаетесь с <a href="javascript:void(0)">политикой конфиденциальности</a>.
-                    </span>
+<section class="catalog">
+    <div class="catalog-container">
+        <div class="catalog-head">
+            <div class="catalog-head__title">Мусоровозы</div>
+            <div class="catalog-head__row">
+                <div class="catalog-head__col">
+                    <div class="catalog-head__desc">
+                        Предназначены для сбора твердых бытовых отходов,
+                        их транспортировки и выгрузки в местах утилизации.
+                    </div>
+                    <a class="catalog-head__more" href="javascript:void(0)">Подробнее про мусоровозы</a>
                 </div>
-            </form>
-
-            <div class="test-drive-success">
-                <img src="<?php echo $path; ?>img/icons/checked.svg" alt="check">
-                <div class="test-drive-success__title">Отправлено !</div>
-                <p class="test-drive-success__caption">Когда-нибудь с Вами свяжутся.</p>
+                <div class="catalog-head__col">
+                    <img class="catalog-head__img" src="<?php echo $path; ?>img/catalog/musor.png" alt="musor">
+                </div>
             </div>
+
         </div>
     </div>
-</section>
 
-<footer class="footer black-footer">
-    <div class="footer-group">
-        <span>© АО «КОММАШ», 2019</span>
-        <a href="javascript:void(0)">Политика конфиденциальности</a>
-    </div>
-    <div class="footer-group">
-        <span>Россия, г. Нижний Новгород, ул. Деловая, 5, а/я 50</span>
-        <a href="mailto:info@kommash.ru">info@kommash.ru</a>
-    </div>
-    <div class="footer-group">
-        <span>Сделано в «Воздухе»</span>
-    </div>
-</footer>
+</section>
 
 <!-- search -->
 <div class="header-search">
@@ -568,4 +373,5 @@
     </div>
 </div>
 <!-- end contacts -->
-<?php include_once $path . "footer.php"; ?>
+
+<?php include_once $path . "footer.php";
