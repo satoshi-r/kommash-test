@@ -176,7 +176,40 @@
                     <img class="catalog-head__img" src="<?php echo $path; ?>img/catalog/musor.png" alt="musor">
                 </div>
             </div>
+        </div>
 
+        <div class="catalog-view">
+            <div class="catalog-view__title">Вид:</div>
+            <form action="javascript:void(0)">
+                <input type="radio" name="view" id="view-table" value="table">
+                <label for="view-table">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                        <path fill-rule="evenodd" d="M16 8v2H0V8h16zm0-4v2H0V4h16zm0-4v2H0V0h16z" />
+                    </svg>
+                    <span>таблица</span>
+                </label>
+                <input type="radio" name="view" id="view-list" value="list">
+                <label for="view-list">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                        <path fill-rule="evenodd" d="M4 8v2H0V8h4zm12 0v2H6V8h10zM4 4v2H0V4h4zm12 0v2H6V4h10zM4 0v2H0V0h4zm12 0v2H6V0h10z" />
+                    </svg>
+                    <span>список</span>
+                </label>
+                <input type="radio" name="view" id="view-grid" value="grid" checked>
+                <label for="view-grid">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
+                        <path fill-rule="evenodd" d="M4 8v2H0V8h4zm6 0v2H6V8h4zm6 0v2h-4V8h4zM4 4v2H0V4h4zm6 0v2H6V4h4zm6 0v2h-4V4h4zM4 0v2H0V0h4zm6 0v2H6V0h4zm6 0v2h-4V0h4z" />
+                    </svg>
+                    <span>плитка</span>
+                </label>
+            </form>
+
+            <div class="catalog-print" onclick="document.print()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M17 2l-.001 2H20v12.01h-3.001L17 18H3l-.001-1.99H0V4h2.999L3 2h14zM4 17h12v-5H4v5zm11-2v1H5v-1h10zm3-9H2v8.01h.999L3 11h14l-.001 3.01H18V6zm-3 7v1H5v-1h10zm1-5v1h-1V8h1zm0-5H4v1h12V3z" />
+                </svg>
+                <span>Версия для печати</span>
+            </div>
         </div>
     </div>
 

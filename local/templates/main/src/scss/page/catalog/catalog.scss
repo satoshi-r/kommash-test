@@ -35,4 +35,94 @@
             color: $accent;
         }
     }
+
+    &-view {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+        position: relative;
+
+        &__title {
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+
+            input[type="radio"] {
+                display: none;
+
+                &:checked+label {
+                    color: $accent;
+
+                    svg path {
+                        fill: $accent;
+                    }
+                }
+            }
+
+            svg {
+                position: relative;
+                top: 2px;
+
+                path {
+                    fill: $dark;
+                    transition: $transition;
+                }
+            }
+
+
+            label {
+                transition: $transition;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+
+                &:hover {
+                    color: $accent;
+                    cursor: pointer;
+
+                    svg path {
+                        fill: $accent;
+                    }
+                }
+
+                span {
+                    margin-left: 10px;
+                    margin-right: 20px;
+                }
+            }
+
+        }
+    }
+
+    &-print {
+        cursor: pointer;
+        font-weight: 500;
+        position: absolute;
+        right: 0;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+
+        svg path {
+            fill: $dark;
+            transition: $transition;
+        }
+
+        span {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            color: $accent;
+
+            svg path {
+                fill: $accent;
+            }
+        }
+    }
 }
