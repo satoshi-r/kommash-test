@@ -125,4 +125,93 @@
             }
         }
     }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    &-filter {
+        width: 280px;
+        background-color: #f7f7f7;
+        padding: 25px;
+
+        input[type="checkbox"] {
+            display: none;
+
+            &:checked+label>span.catalog-filter__checkbox {
+                background-image: url('img/icons/galka.svg');
+                background-repeat: no-repeat;
+                background-color: $dark_green;
+                border-color: $dark_green;
+            }
+        }
+
+        label {
+            cursor: pointer;
+            transition: $transition;
+            margin-bottom: 10px;
+            display: flex;
+
+            &:hover {
+                color: $accent;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__checkbox {
+            border: 2px solid $dark;
+            width: 18px;
+            height: 18px;
+            display: inline-table;
+            margin-right: 10px;
+            margin-top: 2px;
+            vertical-align: sub;
+            transition: $transition;
+            background-size: 10px;
+            background-position: 50%;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        &__caption {
+            font-size: 12px;
+            line-height: 16px;
+            color: #999999;
+            margin-top: 10px;
+        }
+
+        &__exist {
+            margin: 0 -25px;
+            padding: 0 25px;
+            height: 47px;
+            border-bottom: 2px solid #fff;
+        }
+
+        &__clear {
+            margin: 0 -25px;
+            margin-top: 25px;
+            padding: 0 25px;
+            border-top: 2px solid #fff;
+            padding-top: 25px;
+
+            button {
+                border-bottom: 1px dashed $dark;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &-output {
+        width: 865px;
+    }
 }

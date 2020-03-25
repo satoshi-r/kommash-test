@@ -211,6 +211,161 @@
                 <span>Версия для печати</span>
             </div>
         </div>
+
+        <div class="catalog-wrapper">
+            <div class="catalog-filter">
+                <div class="catalog-filter__exist">
+                    <input type="checkbox" name="filter-exist" id="filter-exist">
+                    <label for="filter-exist">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>В наличии</span>
+                    </label>
+                </div>
+
+                <div class="catalog-filter__loading">
+                    <div class="catalog-filter__title">Тип загрузки</div>
+
+                    <input type="checkbox" name="filter-loading__back" id="filter-loading__back">
+                    <label for="filter-loading__back">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Задняя</span>
+                    </label>
+                    <input type="checkbox" name="filter-loading__side" id="filter-loading__side">
+                    <label for="filter-loading__side">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Боковая</span>
+                    </label>
+                    <input type="checkbox" name="filter-loading__bunker" id="filter-loading__bunker">
+                    <label for="filter-loading__bunker">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Бункеровоз</span>
+                    </label>
+                    <input type="checkbox" name="filter-loading__kgm" id="filter-loading__kgm">
+                    <label for="filter-loading__kgm">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Возможность загрузки&#160;КГМ</span>
+                    </label>
+                </div>
+
+                <div class="catalog-filter__mark">
+                    <div class="catalog-filter__title">Марка шасси</div>
+
+                    <input type="checkbox" name="filter-mark__kamaz" id="filter-mark__kamaz">
+                    <label for="filter-mark__kamaz">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>КАМАЗ</span>
+                    </label>
+                    <input type="checkbox" name="filter-mark__maz" id="filter-mark__maz">
+                    <label for="filter-mark__maz">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>МАЗ</span>
+                    </label>
+                    <input type="checkbox" name="filter-mark__gaz" id="filter-mark__gaz">
+                    <label for="filter-mark__gaz">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>ГАЗ</span>
+                    </label>
+                </div>
+
+                <div class="catalog-filter__wheels">
+                    <div class="catalog-filter__title">Колесная формула</div>
+
+                    <input type="checkbox" name="filter-wheels__1" id="filter-wheels__1">
+                    <label for="filter-wheels__1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>4х2</span>
+                    </label>
+                    <input type="checkbox" name="filter-wheels__2" id="filter-wheels__2">
+                    <label for="filter-wheels__2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>4х4</span>
+                    </label>
+                    <input type="checkbox" name="filter-wheels__3" id="filter-wheels__3">
+                    <label for="filter-wheels__3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>6х4</span>
+                    </label>
+                    <input type="checkbox" name="filter-wheels__4" id="filter-wheels__4">
+                    <label for="filter-wheels__4">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>6х6</span>
+                    </label>
+                </div>
+
+                <div class="catalog-filter__volume">
+                    <div class="catalog-filter__title">Объем кузова, м³</div>
+
+                    <input type="checkbox" name="filter-volume__1" id="filter-volume__1">
+                    <label for="filter-volume__1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>До 11</span>
+                    </label>
+                    <input type="checkbox" name="filter-volume__2" id="filter-volume__2">
+                    <label for="filter-volume__2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>12–18</span>
+                    </label>
+                    <input type="checkbox" name="filter-volume__3" id="filter-volume__3">
+                    <label for="filter-volume__3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Более 19</span>
+                    </label>
+                </div>
+
+                <div class="catalog-filter__amount">
+                    <div class="catalog-filter__title">Количество контейнеров</div>
+
+                    <input type="checkbox" name="filter-amount__1" id="filter-amount__1">
+                    <label for="filter-amount__1">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Менее 60</span>
+                    </label>
+                    <input type="checkbox" name="filter-amount__2" id="filter-amount__2">
+                    <label for="filter-amount__2">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>70–80</span>
+                    </label>
+                    <input type="checkbox" name="filter-amount__3" id="filter-amount__3">
+                    <label for="filter-amount__3">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>90–100</span>
+                    </label>
+                    <input type="checkbox" name="filter-amount__4" id="filter-amount__4">
+                    <label for="filter-amount__4">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Более 110</span>
+                    </label>
+
+                    <div class="catalog-filter__caption">
+                        Количество контейнеров зависит от&#160;сезона и состава мусора
+                    </div>
+                </div>
+
+                <div class="catalog-filter__fuel">
+                    <div class="catalog-filter__title">Тип топлива</div>
+
+                    <input type="checkbox" name="filter-fuel__diesel" id="filter-fuel__diesel">
+                    <label for="filter-fuel__diesel">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Дизель</span>
+                    </label>
+                    <input type="checkbox" name="filter-fuel__methane" id="filter-fuel__methane">
+                    <label for="filter-fuel__methane">
+                        <span class="catalog-filter__checkbox"></span>
+                        <span>Метан</span>
+                    </label>
+                </div>
+
+                <div class="catalog-filter__clear">
+                    <button id="filter-clear">Очистить фильтр</button>
+                </div>
+            </div>
+
+            <div class="catalog-output">
+
+            </div>
+        </div>
+
     </div>
 
 </section>

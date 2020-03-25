@@ -9,7 +9,7 @@
         display: flex;
         margin: 0px auto;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
     &-img {
@@ -26,8 +26,8 @@
             width: 0;
             height: 2px;
             background-color: #fff;
-            display: block;
             transition: $transition;
+            display: block;
             margin-bottom: 5px;
         }
     }
