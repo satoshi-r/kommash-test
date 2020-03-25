@@ -151,7 +151,7 @@
     </div>
 </div>
 
-<footer class="footer black-footer">
+<footer class="footer green-footer">
     <div class="footer-group">
         <span>© АО «КОММАШ», 2019</span>
         <a href="javascript:void(0)">Политика конфиденциальности</a>
