@@ -1,0 +1,47 @@
+.page404 {
+    &_wrapper {
+        margin-top: calc(-100vh + 135px);
+        height: calc(100vh - 135px);
+        background: url('img/404_page.jpg') no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+    }
+
+    &_text {
+        color: #fff;
+        text-align: center;
+        padding-top: 200px;
+
+        &_title {
+            font-size: 164px;
+            line-height: 164px;
+            font-weight: 900;
+        }
+
+        &_subtitle {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        &_desc {
+            font-size: 18px;
+
+            .link_splash {
+                color: #fff;
+                border-bottom: 1px solid #fff;
+                transition: all .3s ease;
+
+                &:hover {
+                    color: #009639;
+                    border-bottom: 1px solid #009639;
+                }
+            }
+        }
+    }
+}
