@@ -50,6 +50,7 @@ gulp.task('browser-sync', () => {
 	browserSync({
 		proxy: 'kommash-test',
 		notify: false,
+		port: 4000
 	})
 });
 
