@@ -1,7 +1,6 @@
 .page404 {
     &_wrapper {
-        margin-top: calc(-100vh + 135px);
-        height: calc(100vh - 135px);
+        height: calc(100vh - 65px);
         background: url('img/404_page.jpg') no-repeat;
         background-size: cover;
         background-position: bottom;
