@@ -1,8 +1,10 @@
+import * as $ from 'jquery'
 import './header'
 import './first-slider'
 import './animations'
 import './form'
-import * as $ from 'jquery'
+import './catalog'
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // Остановить анимацию во время изменения размера окна
