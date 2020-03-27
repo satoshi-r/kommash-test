@@ -1,4 +1,4 @@
-<?php $path = "../../local/templates/main/"; ?>
+<?php $path = "../local/templates/main/"; ?>
 <?php include_once $path . "header.php"; ?>
 
 <div class="hamburger-btn-wrap">

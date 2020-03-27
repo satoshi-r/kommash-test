@@ -31,9 +31,6 @@ $(document).ready(function () {
         'overflow': 'hidden'
     })
 
-    console.log(height);
-    
-
     btn.click(function () {
         desc.toggleClass('show');
 

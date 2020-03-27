@@ -4,6 +4,7 @@ import './first-slider'
 import './animations'
 import './form'
 import './catalog'
+import './product-slider'
 
 
 document.addEventListener("DOMContentLoaded", () => {
