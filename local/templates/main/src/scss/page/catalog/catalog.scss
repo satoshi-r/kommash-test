@@ -252,10 +252,15 @@
             font-size: 18px;
             position: relative;
             transition: $transition;
+            line-height: 30px;
 
             p {
                 margin-bottom: 15px;
-                line-height: 30px;
+            }
+
+            a {
+                font-weight: 500;
+                color: $dark;
             }
         }
 
@@ -287,7 +292,37 @@
         }
     }
 
-    
+    &-exist {
+        background-color: $dark_green;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: #fff;
+        width: 100%;
+
+        &__title {
+            font-size: 34px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 460px;
+            text-align: center;
+            color: #fff;
+            display: block;
+            margin: 0px auto;
+            margin-bottom: 20px;
+            line-height: 30px;
+            font-size: 18px;
+        }
+
+        &__btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
 
     &-item {
         width: 290px;

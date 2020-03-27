@@ -1207,8 +1207,36 @@
         <button class="catalog-description__btn">Подробнее</button>
     </div>
 
-    
+    <div class="catalog-exist">
+        <div class="catalog-exist__title">
+            Техника в наличии
+        </div>
+
+        <div class="catalog-exist__text">
+            Если Вам нужна техника здесь и&#160;сейчас,
+            Вы&#160;можете заказать её&#160;со&#160;склада. Завод КОММАШ быстро доставит уже готовые модели.
+        </div>
+
+        <div class="catalog-exist__btn">
+            <a href="javascript:void(0)" class="btn">Заказать</a>
+        </div>
+
+    </div>
 </section>
+
+<footer class="footer green-footer">
+    <div class="footer-group">
+        <span>© АО «КОММАШ», 2019</span>
+        <a href="javascript:void(0)">Политика конфиденциальности</a>
+    </div>
+    <div class="footer-group">
+        <span>Россия, г. Нижний Новгород, ул. Деловая, 5, а/я 50</span>
+        <a href="mailto:info@kommash.ru">info@kommash.ru</a>
+    </div>
+    <div class="footer-group">
+        <span>Сделано в «Воздухе»</span>
+    </div>
+</footer>
 
 <!-- search -->
 <div class="header-search">
