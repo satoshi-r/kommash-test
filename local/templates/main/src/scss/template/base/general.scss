@@ -81,9 +81,20 @@ button {
     justify-content: center;
 
     &:hover {
-        background-color: #00712B;
-        border-color: #00712B;
+        background-color: $dark_green;
+        border-color: $dark_green;
         color: #fff;
+    }
+}
+
+.transparent-btn {
+    background-color: transparent;
+    color: $accent;
+
+    &:hover {
+        color: #fff;
+        border-color: $accent;
+        background-color: $accent;
     }
 }
 
@@ -109,4 +120,3 @@ picture {
     animation: none !important;
     transition: none !important;
 }
-

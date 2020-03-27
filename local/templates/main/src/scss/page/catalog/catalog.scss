@@ -222,7 +222,72 @@
         &__head {
             display: none;
         }
+
+        &__more {
+            width: 100%;
+            padding-top: 40px;
+            padding-bottom: 60px;
+            
+            button {
+                margin: 0px auto;
+            }
+        }        
     }
+
+    &-description {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        background-color: #e6e6e6;
+
+        &__title {
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 770px;
+            margin: 0px auto;
+            font-size: 18px;
+            position: relative;
+            transition: $transition;
+
+            p {
+                margin-bottom: 15px;
+                line-height: 30px;
+            }
+        }
+
+        &__text.show {
+
+            .catalog-description__shadow {
+                opacity: 0;
+            }
+        }
+
+        &__btn {
+            text-align: center;
+            display: block;
+            margin: 0px auto;
+            margin-top: 25px;
+            color: $accent;
+            font-weight: 500;
+            border-bottom: 1px dashed $accent;
+        }
+
+        &__shadow {
+            height: 100px;
+            width: 100%;
+            bottom: 0;
+            opacity: 1;
+            transition: $transition;
+            position: absolute;
+            background-image: linear-gradient(to bottom, rgba(247, 247, 247, 0), #e6e6e6);
+        }
+    }
+
+    
 
     &-item {
         width: 290px;
