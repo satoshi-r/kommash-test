@@ -181,22 +181,22 @@
         <div class="catalog-view">
             <div class="catalog-view__title">Вид:</div>
             <form action="javascript:void(0)">
-                <input type="radio" name="view" id="view-table" value="table">
-                <label for="view-table">
+                <input type="radio" name="view" id="table-view" value="table">
+                <label for="table-view">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                         <path fill-rule="evenodd" d="M16 8v2H0V8h16zm0-4v2H0V4h16zm0-4v2H0V0h16z" />
                     </svg>
                     <span>таблица</span>
                 </label>
-                <input type="radio" name="view" id="view-list" value="list">
-                <label for="view-list">
+                <input type="radio" name="view" id="list-view" value="list">
+                <label for="list-view">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                         <path fill-rule="evenodd" d="M4 8v2H0V8h4zm12 0v2H6V8h10zM4 4v2H0V4h4zm12 0v2H6V4h10zM4 0v2H0V0h4zm12 0v2H6V0h10z" />
                     </svg>
                     <span>список</span>
                 </label>
-                <input type="radio" name="view" id="view-grid" value="grid" checked>
-                <label for="view-grid">
+                <input type="radio" name="view" id="grid-view" value="grid" checked>
+                <label for="grid-view">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
                         <path fill-rule="evenodd" d="M4 8v2H0V8h4zm6 0v2H6V8h4zm6 0v2h-4V8h4zM4 4v2H0V4h4zm6 0v2H6V4h4zm6 0v2h-4V4h4zM4 0v2H0V0h4zm6 0v2H6V0h4zm6 0v2h-4V0h4z" />
                     </svg>
@@ -361,8 +361,819 @@
                 </div>
             </div>
 
-            <div class="catalog-output">
+            <div class="catalog-output grid-view">
+                <div class="catalog-output__head">
+                    <button id="sort-model" class="catalog-output__sort">Модель</button>
+                    <button id="sort-loading" class="catalog-output__sort">Загрузка</button>
+                    <button id="sort-chassis" class="catalog-output__sort">Шасси</button>
+                    <button id="sort-volume" class="catalog-output__sort">Объем кузова</button>
+                    <button id="sort-waste" class="catalog-output__sort">Масса отходов</button>
+                </div>
 
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item3.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item4.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item5.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item6.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item7.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item8.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item9.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item10.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item11.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item12.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item13.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item14.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item15.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item16.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item3.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1-01</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+                            <div class="catalog-item__desc">
+                                Мусоровоз с&#160;боковой загрузкой КО-440-4М предназначен для механизированной загрузки, уплотнения,
+                                транспортировки и&#160;выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной и&#160;ручной загрузки твердых бытовых отходов, уплотнения массы,
+                                транспортировки и&#160;выгрузки на&#160;мусороперегрузочных, мусоросортировочных, мусоросжигательных
+                                станциях или в&#160;местах утилизации и&#160;захоронения отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">Новинка</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item3.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440К20</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property-list">Загрузка</div>
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property-list">Объем</div>
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property-list">Шасси</div>
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+
+                                <div class="catalog-item__value">5375 кг</div>
+                            </div>
+
+                            <div class="catalog-item__desc">
+                                Предназначен для механизированной загрузки, уплотнения, транспортировки и выгрузки твёрдых бытовых отходов.
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
             </div>
         </div>
 
