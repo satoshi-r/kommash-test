@@ -183,6 +183,122 @@
                 <img src="<?php echo $path; ?>img/product/slider_thumb4.jpg" alt="thumb">
             </div>
         </div>
+
+        <div class="product-badge__wrap">
+            <div class="product-badge">Новинка</div>
+            <div class="product-badge">Лидер продаж</div>
+            <div class="product-badge">Выбор эксплуатанта 2018</div>
+        </div>
+
+        <div class="product-btns">
+            <button class="product-btns__compare">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5 13v2H0v-2h5zm7 0v2H7v-2h5zm6-9v2h2v2h-2v2h-2V8h-2V6h2V4h2zM5 8v2H0V8h5zm7 0v2H7V8h5zM5 3v2H0V3h5zm7 0v2H7V3h5z" />
+                </svg>
+                Добавить к сравнению
+            </button>
+            <button class="product-btns__order btn">Заказать</button>
+            <a href="javascript:void(0)" class="product-btns__leasing">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M15.432 1l1.964 3H20v14H0V4h4.487l10.945-3zM18 6H2v10h16v-2h-6V8h6V6zm0 3h-5v4h5V9zm-1 1v2h-1v-2h1zm-1.944-7.795L8.507 4h7.724l-1.175-1.795z" />
+                </svg>
+                Рассчитать в лизинг
+            </a>
+        </div>
+
+        <div class="product-extra">Возможно установить на шасси марок: DAF, SCANIA, MAN</div>
+
+        <div class="product-info">
+            <div class="product-tabs">
+                <button class="active">Характеристики</button>
+                <button class="">Описание</button>
+                <button class="">Отзывы</button>
+                <button class="">Документы</button>
+            </div>
+
+            <div class="product-output">
+                <div class="product-characteristics">
+                    <div class="product-characteristics__row">
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Базовое шасси</span>
+                            </div>
+                            <div class="product-characteristics__value">КамАЗ-65115</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Тип топлива</span>
+                            </div>
+                            <div class="product-characteristics__value">Дизель</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Объем кузова</span>
+                            </div>
+                            <div class="product-characteristics__value">22/18 м³</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Масса загружаемых отходов до</span>
+                            </div>
+                            <div class="product-characteristics__value">11 120 кг</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Коэффициент уплотнения мусора</span>
+                            </div>
+                            <div class="product-characteristics__value">2,5—7</div>
+                        </div>
+                    </div>
+                    <div class="product-characteristics__divider"></div>
+                    <div class="product-characteristics__row">
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Грузоподъемность манипулятора</span>
+                            </div>
+                            <div class="product-characteristics__value small">800 кг</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Грузоподъемность портального захвата (опционально)</span>
+                            </div>
+                            <div class="product-characteristics__value small">3000 кг</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Емкость загрузочного ковша</span>
+                            </div>
+                            <div class="product-characteristics__value small">2 м³</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Количество загружаемых евроконтейнеров 1,1 м³</span>
+                            </div>
+                            <div class="product-characteristics__value small">100 шт.</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Полная масса</span>
+                            </div>
+                            <div class="product-characteristics__value small">25 200 кг</div>
+                        </div>
+                        <div class="product-characteristics__item">
+                            <div class="product-characteristics__property">
+                                <span>Габаритные размеры (Д×Ш×В)</span>
+                            </div>
+                            <div class="product-characteristics__value small">9200×2550×3750 мм</div>
+                        </div>
+                    </div>
+                    <ul class="product-characteristics__list">
+                        <li>Принципиально новая конструкция заднего борта</li>
+                        <li>Загрузка КГМ контейнером-лодочкой до 8 м³</li>
+                        <li>Работа в любое время суток</li>
+                        <li>Принципиально новая конструкция заднего борта</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 

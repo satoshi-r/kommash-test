@@ -371,7 +371,7 @@
                 </div>
 
                 <div class="catalog-item">
-                    <a href="javascript:void(0)">
+                    <a href="../product/">
                         <div class="catalog-item__badges">
                             <div class="catalog-item__badge">В наличии</div>
                             <div class="catalog-item__badge">Новинка</div>

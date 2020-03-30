@@ -7,7 +7,6 @@
     background-color: #fff;
     color: $dark;
     padding-top: 30px;
-    height: 700px; // del
 
     &-head {
         width: 100%;
@@ -90,13 +89,79 @@
             display: flex !important;
             justify-content: center;
             margin-bottom: 15px;
+            padding: 4px 0px;
         }
 
         .slick-current {
-            .slider-thumb-item img{
-                border: 4px solid $accent;
+            .slider-thumb-item {
+                background-color: $accent;
                 transition: $transition;
+            } 
+            
+        }
+    }
+
+    &-badge {
+        color: #fff;
+        background-color: $accent;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+        font-size: 12px;
+
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            position: absolute;
+            top: 170px;
+            right: 0;
+        }
+    }
+
+    &-btns {
+        display: flex;
+        justify-content: center;
+
+        a,
+        button {
+
+            svg {
+                margin-right: 5px;
+                path {
+                    fill: $dark;
+                    transition: $transition;
+                }
+            }
+
+
+            &:hover {
+                svg path {
+                    fill: $accent;
+                }
             }
         }
+
+        &__compare {
+            display: flex;
+            align-items: center;
+        }
+
+        &__order {
+            color: #fff;
+            margin: 0px 15px;
+        }
+
+        &__leasing {
+            color: $dark;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-extra {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 15px;
     }
 }

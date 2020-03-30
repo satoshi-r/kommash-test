@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="menu-production__column">
-                                <a href="catalog/musor/index.php" class="menu-production__item">
+                                <a href="catalog/" class="menu-production__item">
                                     <img src="<?php echo $path; ?>img/first/musor.png" alt="musor">
                                     Мусоровозы
                                 </a>
