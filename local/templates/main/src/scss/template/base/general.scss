@@ -98,6 +98,14 @@ button {
     }
 }
 
+.show {
+    display: block;
+}
+	
+.hide {
+    display: none;
+}
+
 body {
     font-size: 16px;
     min-width: 320px;

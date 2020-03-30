@@ -163,7 +163,7 @@
 <section class="catalog">
     <div class="catalog-container">
         <div class="catalog-head">
-            <div class="catalog-head__title">Мусоровозы</div>
+            <h1 class="catalog-head__title">Мусоровозы</h1>
             <div class="catalog-head__row">
                 <div class="catalog-head__col">
                     <div class="catalog-head__desc">

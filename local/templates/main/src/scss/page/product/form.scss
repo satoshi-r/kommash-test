@@ -1,0 +1,239 @@
+.product {
+    &-modal {
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        display: none;
+        padding-top: 10px;
+
+        &__container {
+            width: 400px;
+            margin: 0px auto;
+            margin-top: 30px;
+        }
+
+        &__agreement {
+            font-size: 12px;
+            line-height: 17px;
+            text-align: center;
+
+            a {
+                color: $accent;
+
+                &:hover {
+                    color: $dark_green;
+                }
+            }
+        }
+
+        &__submit {
+            margin: 0px auto;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        &__close {
+            margin: 0px auto;
+            display: block;
+
+            svg g[fill="none"] {
+                stroke: $dark;
+                transition: $transition;
+            }
+
+            &:hover {
+                svg g[fill="none"] {
+                    stroke: $accent;
+                }
+            }
+        }
+
+        &__title {
+            font-size: 34px;
+            text-align: center;
+        }
+
+        &-success {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+
+            img {
+                height: 100px;
+                object-fit: contain;
+                margin-bottom: 20px;
+            }
+
+            &__title {
+                text-transform: uppercase;
+                font-size: 22px;
+                font-weight: 700;
+                color: $accent;
+            }
+
+            &__caption {
+                font-size: 14px;
+            }
+        }
+
+        form {
+            width: 100%;
+            padding-left: 20px;
+
+            .form-submit-wrap {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            .form-agreement {
+                font-size: 12px;
+                line-height: 14px;
+
+                a {
+                    color: $accent;
+                }
+            }
+
+            .input {
+                position: relative;
+                margin: 0;
+                width: 100%;
+
+                &[for="td_comment"] {
+                    width: calc(100% + 20px);
+                    margin-left: -20px;
+                }
+            }
+
+            .label {
+                position: absolute;
+                top: 34px;
+                left: 0;
+                font-size: 14px;
+                color: $dark;
+                transform-origin: 0 0;
+                transition: $transition;
+            }
+
+            .border {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background: $dark_green;
+                transform: scaleX(0);
+                transform-origin: 0 0;
+                transition: all 0.15s ease;
+            }
+
+            input,
+            textarea {
+                -webkit-appearance: none;
+                width: 100%;
+                margin-top: 37px;
+                border: 0;
+                font-family: inherit;
+                height: 28px;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+                background: none;
+                border-radius: 0;
+                color: $dark;
+                transition: all 0.15s ease;
+
+                &:not(:placeholder-shown)+span {
+                    color: rgba(0, 0, 0, 0.18);
+                    transform: translateY(-12px) scale(0.75);
+                }
+
+                &:focus {
+                    background: none;
+                    outline: none;
+
+                    +span {
+                        color: $dark;
+                        transform: translateY(-12px) scale(0.75);
+
+                        +.border {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 90px;
+                border: 1px solid rgba(0, 0, 0, 0.18);
+                border-radius: 1px;
+                padding-left: 20px;
+
+                +.label {
+                    top: 42px;
+                    left: 20px;
+                }
+
+                &:not(:placeholder-shown)+span {
+                    transform: translateY(-22px) scale(0.75);
+                }
+
+                &:focus {
+                    border-color: $dark_green;
+
+                    +span {
+                        transform: translateY(-22px) scale(0.75);
+
+                        +.border {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .error_message {
+                color: #db2a1b;
+                font-size: 12px;
+                position: absolute;
+                display: none;
+            }
+
+            .form_accepted::after {
+                content: '';
+                display: block;
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                bottom: 8px;
+                right: 0;
+                background: url('img/icons/checked.svg') no-repeat;
+                background-size: cover;
+            }
+
+            .form_error {
+                .error_message {
+                    display: block;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 14px;
+                    height: 14px;
+                    position: absolute;
+                    bottom: 8px;
+                    right: 0;
+                    background: url('img/icons/error.svg') no-repeat;
+                    background-size: cover;
+                }
+
+            }
+        }
+    }
+}

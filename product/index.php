@@ -140,84 +140,160 @@
 
 <div class="product-wrapper">
     <div class="product">
-        <div class="product-path">
-            <a href="../catalog/">Вся продукция</a>
-            <img src="<?php echo $path; ?>img/icons/light.svg" alt=">">
-            <a href="../catalog/">Мусоровозы</a>
-        </div>
+        <div class="product-main">
 
-        <div class="product-print">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <path d="M17 2l-.001 2H20v12.01h-3.001L17 18H3l-.001-1.99H0V4h2.999L3 2h14zM4 17h12v-5H4v5zm11-2v1H5v-1h10zm3-9H2v8.01h.999L3 11h14l-.001 3.01H18V6zm-3 7v1H5v-1h10zm1-5v1h-1V8h1zm0-5H4v1h12V3z" />
-            </svg>
-        </div>
 
-        <div class="product-title">Мусоровоз с задней загрузкой КО-440В1-01</div>
+            <div class="product-path">
+                <a href="../catalog/">Вся продукция</a>
+                <img src="<?php echo $path; ?>img/icons/light.svg" alt=">">
+                <a href="../catalog/">Мусоровозы</a>
+            </div>
 
-        <div class="slider">
-            <div class="slider-item">
-                <img src="<?php echo $path; ?>img/product/slider1.jpg" alt="slider">
-            </div>
-            <div class="slider-item">
-                <img src="<?php echo $path; ?>img/product/slider2.jpg" alt="slider">
-            </div>
-            <div class="slider-item">
-                <img src="<?php echo $path; ?>img/product/slider3.jpg" alt="slider">
-            </div>
-            <div class="slider-item">
-                <img src="<?php echo $path; ?>img/product/slider4.jpg" alt="slider">
-            </div>
-        </div>
-
-        <div class="slider-thumb">
-            <div class="slider-thumb-item">
-                <img src="<?php echo $path; ?>img/product/slider_thumb1.jpg" alt="thumb">
-            </div>
-            <div class="slider-thumb-item">
-                <img src="<?php echo $path; ?>img/product/slider_thumb2.jpg" alt="thumb">
-            </div>
-            <div class="slider-thumb-item">
-                <img src="<?php echo $path; ?>img/product/slider_thumb3.jpg" alt="thumb">
-            </div>
-            <div class="slider-thumb-item">
-                <img src="<?php echo $path; ?>img/product/slider_thumb4.jpg" alt="thumb">
-            </div>
-        </div>
-
-        <div class="product-badge__wrap">
-            <div class="product-badge">Новинка</div>
-            <div class="product-badge">Лидер продаж</div>
-            <div class="product-badge">Выбор эксплуатанта 2018</div>
-        </div>
-
-        <div class="product-btns">
-            <button class="product-btns__compare">
+            <div class="product-print">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5 13v2H0v-2h5zm7 0v2H7v-2h5zm6-9v2h2v2h-2v2h-2V8h-2V6h2V4h2zM5 8v2H0V8h5zm7 0v2H7V8h5zM5 3v2H0V3h5zm7 0v2H7V3h5z" />
+                    <path d="M17 2l-.001 2H20v12.01h-3.001L17 18H3l-.001-1.99H0V4h2.999L3 2h14zM4 17h12v-5H4v5zm11-2v1H5v-1h10zm3-9H2v8.01h.999L3 11h14l-.001 3.01H18V6zm-3 7v1H5v-1h10zm1-5v1h-1V8h1zm0-5H4v1h12V3z" />
                 </svg>
-                Добавить к сравнению
-            </button>
-            <button class="product-btns__order btn">Заказать</button>
-            <a href="javascript:void(0)" class="product-btns__leasing">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M15.432 1l1.964 3H20v14H0V4h4.487l10.945-3zM18 6H2v10h16v-2h-6V8h6V6zm0 3h-5v4h5V9zm-1 1v2h-1v-2h1zm-1.944-7.795L8.507 4h7.724l-1.175-1.795z" />
-                </svg>
-                Рассчитать в лизинг
-            </a>
-        </div>
+            </div>
 
-        <div class="product-extra">Возможно установить на шасси марок: DAF, SCANIA, MAN</div>
+            <h1 class="product-title">Мусоровоз с задней загрузкой КО-440В1-01</h1>
+
+            <div class="slider">
+                <div class="slider-item">
+                    <img src="<?php echo $path; ?>img/product/slider1.jpg" alt="slider">
+                </div>
+                <div class="slider-item">
+                    <img src="<?php echo $path; ?>img/product/slider2.jpg" alt="slider">
+                </div>
+                <div class="slider-item">
+                    <img src="<?php echo $path; ?>img/product/slider3.jpg" alt="slider">
+                </div>
+                <div class="slider-item">
+                    <img src="<?php echo $path; ?>img/product/slider4.jpg" alt="slider">
+                </div>
+            </div>
+
+            <div class="slider-thumb">
+                <div class="slider-thumb-item">
+                    <img src="<?php echo $path; ?>img/product/slider_thumb1.jpg" alt="thumb">
+                </div>
+                <div class="slider-thumb-item">
+                    <img src="<?php echo $path; ?>img/product/slider_thumb2.jpg" alt="thumb">
+                </div>
+                <div class="slider-thumb-item">
+                    <img src="<?php echo $path; ?>img/product/slider_thumb3.jpg" alt="thumb">
+                </div>
+                <div class="slider-thumb-item">
+                    <img src="<?php echo $path; ?>img/product/slider_thumb4.jpg" alt="thumb">
+                </div>
+            </div>
+
+            <div class="product-badge__wrap">
+                <div class="product-badge">Новинка</div>
+                <div class="product-badge">Лидер продаж</div>
+                <div class="product-badge">Выбор эксплуатанта 2018</div>
+            </div>
+
+            <div class="product-btns">
+                <button class="product-btns__compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5 13v2H0v-2h5zm7 0v2H7v-2h5zm6-9v2h2v2h-2v2h-2V8h-2V6h2V4h2zM5 8v2H0V8h5zm7 0v2H7V8h5zM5 3v2H0V3h5zm7 0v2H7V3h5z" />
+                    </svg>
+                    Добавить к сравнению
+                </button>
+                <button class="product-btns__order btn">Заказать</button>
+                <a href="javascript:void(0)" class="product-btns__leasing">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M15.432 1l1.964 3H20v14H0V4h4.487l10.945-3zM18 6H2v10h16v-2h-6V8h6V6zm0 3h-5v4h5V9zm-1 1v2h-1v-2h1zm-1.944-7.795L8.507 4h7.724l-1.175-1.795z" />
+                    </svg>
+                    Рассчитать в лизинг
+                </a>
+            </div>
+
+            <div class="product-extra">Возможно установить на шасси марок: DAF, SCANIA, MAN</div>
+
+            <!-- modal -->
+            <div id="product-modal" class="product-modal fade">
+                <button id="product-modal-close" class="product-modal__close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+                        <g fill="none" fill-rule="evenodd" stroke-width="2">
+                            <circle cx="18.5" cy="18.5" r="17.5" />
+                            <g stroke-linecap="square">
+                                <path d="M12.5 0.5L0.458 12.542" transform="translate(12 12)" />
+                                <path d="M12.5 0.5L0.458 12.542" transform="translate(12 12) matrix(-1 0 0 1 13 0)" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+
+                <div class="product-modal__container">
+                    <div class="product-modal__title">
+                        Запрос на технику
+                    </div>
+
+                    <form action="../mail.php" method="POST">
+                        <label for="p_name" class="input">
+                            <input name="p_name" type="text" id="p_name" placeholder="&nbsp;">
+                            <span class="label">Ваше Имя</span>
+                            <span class="border"></span>
+                            <div class="error_message"></div>
+                        </label>
+
+                        <label for="p_email" class="input">
+                            <input name="p_email" type="email" id="p_email" placeholder="&nbsp;">
+                            <span class="label">Эл.почта</span>
+                            <span class="border"></span>
+                            <div class="error_message"></div>
+                        </label>
+
+                        <label for="p_tel" class="input">
+                            <input name="p_tel" type="tel" id="p_tel" placeholder="&nbsp;">
+                            <span class="label">Телефон</span>
+                            <span class="border"></span>
+                            <div class="error_message"></div>
+                        </label>
+
+                        <label for="p_company" class="input">
+                            <input name="p_company" type="text" id="p_company" placeholder="&nbsp;">
+                            <span class="label">Компания</span>
+                            <span class="border"></span>
+                            <div class="error_message"></div>
+                        </label>
+
+                        <label for="p_region" class="input">
+                            <input name="p_region" type="text" id="p_region" placeholder="&nbsp;">
+                            <span class="label">Регион</span>
+                            <span class="border"></span>
+                            <div class="error_message"></div>
+                        </label>
+
+                        <button type="submit" class="btn product-modal__submit">Отправить</button>
+                        <div class="product-modal__agreement">
+                            Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
+                            и соглашаетесь с <a href="javascript:void(0)">политикой конфиденциальности</a>.
+                        </div>
+                    </form>
+
+                    <div class="product-modal-success">
+                        <img src="<?php echo $path; ?>img/icons/checked.svg" alt="check">
+                        <div class="product-modal-success__title">Отправлено !</div>
+                        <p class="product-modal-success__caption">Когда-нибудь с Вами свяжутся.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end modal -->
+        </div>
 
         <div class="product-info">
             <div class="product-tabs">
-                <button class="active">Характеристики</button>
-                <button class="">Описание</button>
-                <button class="">Отзывы</button>
-                <button class="">Документы</button>
+                <button class="focus product-tabs__item">Характеристики</button>
+                <button class="product-tabs__item">Описание</button>
+                <button class="product-tabs__item">Отзывы</button>
+                <button class="product-tabs__item">Документы</button>
             </div>
 
             <div class="product-output">
-                <div class="product-characteristics">
+                <div class="tab-content product-characteristics fade">
                     <div class="product-characteristics__row">
                         <div class="product-characteristics__item">
                             <div class="product-characteristics__property">
@@ -295,6 +371,110 @@
                         <li>Работа в любое время суток</li>
                         <li>Принципиально новая конструкция заднего борта</li>
                     </ul>
+                </div>
+
+                <div class="tab-content product-caption fade">
+                    <p>
+                        Мусоровоз с задней загрузкой КО-440В1-01 предназначен для механизированного сбора твердых бытовых
+                        отходов из металлических и пластмассовых евроконтейнеров всех типов вместимостью до 1,1 м³, их уплотнения,
+                        транспортирования, и механизированной выгрузки в местах утилизации.
+                        Спецоборудование состоит из основных частей: кузов, задний борт, плита выталкивающая, опрокидыватель,
+                        гидравлическая и электрическая системы.
+                        Уплотнение отходов осуществляется при помощи прессующей и выталкивающей плит. Выгрузка отходов осуществляется
+                        поднятием заднего борта и выталкивающей плитой.
+                    </p>
+
+                    <h2>Особенности</h2>
+
+                    <ul>
+                        <li>высокая степень уплотнения мусора</li>
+                        <li>работа прессующего механизма в автоматическом, полуавтоматическом и ручном режиме</li>
+                        <li>материал ковша — низколегированная конструкционная сталь 09Г2С</li>
+                        <li>высококачественная гидравлика и высокопрочные металлорукава высокого давления, соответствующие европейским стандартам</li>
+                        <li>безопасная работа в зоне загрузки мусора</li>
+                        <li>современный европейский дизайн</li>
+                        <li>простота в эксплуатации</li>
+                    </ul>
+
+                    <h2>Отличия от мусоровозов с боковой загрузкой:</h2>
+
+                    <p>
+                        Применение системы прессования в мусоровозах с задней загрузкой позволяет повысить коэффициент уплотнения мусора до 7, в то время как в мусоровозах
+                        с боковой загрузкой, этот коэффициент не превышает 2,5-4,
+                        что увеличивает массу вывозимого мусора и позволяет сократить издержки на эксплуатацию за счет снижения необходимого количества единиц спецтехники
+                    </p>
+
+                    <p>
+                        Применение технологии задней загрузки позволяет решать экологические проблемы за счет исключения просыпания мусора при загрузке контейнера, так как загрузка осуществляется
+                        в габаритах мусороприемника, а не через небольшую воронку на крыше мусоросборника, как при боковой загрузке
+                    </p>
+
+                    <p>
+                        Работа с механизмом опрокидывания на мусоровозах с задней загрузкой значительно безопасней для оператора машины, т.к. подъем контейнера осуществляется на высоту 1,5-1,8 м
+                        от земли, а не на 2,5-3 м как при боковой загрузке
+                    </p>
+
+                    <p>
+                        Применение контейнеров на колесах позволяет подавать их к месту разгрузки от мест, куда машина не может подъехать близко
+                    </p>
+
+                    <p>
+                        Мусоровоз с задней загрузкой возможно загружать вручную. При боковой же, погрузка может осуществляться только из контейнеров заданного типа
+                    </p>
+                </div>
+
+                <div class="tab-content product-reviews fade">
+                    <div class="product-reviews__container">
+                        <a href="javascript:void(0)" class="product-reviews__item">
+                            <img src="<?php echo $path; ?>img/product/slider_thumb2.jpg" alt="thumb">
+                            <div class="product-reviews__col">
+                                <div class="product-reviews__title">Прицеп-цистерна ПЦ 86531</div>
+                                <div class="product-reviews__text">
+                                    Благодарю Вас за операвтиную помощь в устранении неисправностей ТЗА-10.
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="javascript:void(0)" class="product-reviews__item">
+                            <img src="<?php echo $path; ?>img/product/slider_thumb2.jpg" alt="thumb">
+                            <div class="product-reviews__col">
+                                <div class="product-reviews__title">Полуприцеп-цистерна ППЦ-91392-0000010</div>
+                                <div class="product-reviews__text">
+                                    Позвольте выразить Вам и Вашим сотрудникам сердечную признательность...
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="product-reviews__btn">
+                        <a href="javascript:void(0)" class="btn transparent-btn">Все отзывы</a>
+                    </div>
+
+                </div>
+
+                <div class="tab-content product-documents fade">
+                    <div class="product-documents__container">
+                        <a href="javascript:void(0)" class="product-documents__item">
+                            <img src="<?php echo $path; ?>img/icons/pdf.svg" alt="pdf">
+                            <div class="product-documents__col">
+                                <div class="product-documents__title">Спецификация ППЦ-91399</div>
+                                <div class="product-documents__desc">
+                                    pdf, 5.6 мб
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="javascript:void(0)" class="product-documents__item">
+                            <img src="<?php echo $path; ?>img/icons/pdf.svg" alt="pdf">
+                            <div class="product-documents__col">
+                                <div class="product-documents__title">Условия гарантии</div>
+                                <div class="product-documents__desc">
+                                    pdf, 5.6 мб
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -507,5 +687,6 @@
     </div>
 </div>
 <!-- end contacts -->
+
 
 <?php include_once $path . "footer.php";

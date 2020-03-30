@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-    // form
-    var form = $('.test-drive form'),
+    // form test-drive
+    const form = $('.test-drive form'),
         formSuccess = $('.test-drive-success'),
         inputs = form.find('input:not([type="text"])');
 
@@ -52,7 +52,7 @@ $(document).ready(function () {
     }
 
     function checkTel(input) {
-        var wrap = $(input).closest('.input'),
+        const wrap = $(input).closest('.input'),
             inputLen = $(input).val().length;
 
         if (inputLen == 17) {
@@ -68,7 +68,7 @@ $(document).ready(function () {
     }
 
     function checkEmail(input) {
-        var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i,
+        const pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i,
             acceptPattern = $(input).val().search(pattern),
             wrap = $(input).closest('.input'),
             inputLen = $(input).val().length;
@@ -86,7 +86,7 @@ $(document).ready(function () {
     }
 
     inputs.each(function (i, item) {
-        var isTel = $(item).attr('type') == 'tel',
+        const isTel = $(item).attr('type') == 'tel',
             isEmail = $(item).attr('type') == 'email';
 
         $(item).on('blur', function () {

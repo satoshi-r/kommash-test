@@ -10,8 +10,8 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 40px;
-        
-        button {
+
+        &__item {
             font-size: 18px;
             font-weight: 500;
             margin: 0px 15px;
@@ -38,7 +38,7 @@
             }
         }
 
-        .active {
+        .focus {
             color: $accent;
 
             &:hover {
@@ -152,4 +152,114 @@
         }
     }
 
+    &-caption {
+        line-height: 30px;
+        padding-bottom: 100px;
+
+        h2,
+        h3,
+        h4 {
+            font-size: 24px;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul li:before {
+            content: '—';
+            margin-right: 5px;
+        }
+    }
+
+    &-reviews {
+        margin-left: -220px;
+        margin-right: -180px;
+        padding: 0 55px;
+        padding-bottom: 80px;
+        display: flex;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: 570px;
+            height: 240px;
+            background-color: #fff;
+            padding: 30px;
+            display: flex;
+            color: $dark;
+
+            &:hover {
+                color: $dark;
+            }
+
+            img {
+                height: 100%;
+                object-fit: contain;
+                margin-right: 20px;
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+
+    &-documents {
+        margin-left: -220px;
+        margin-right: -180px;
+        padding: 0px 255px;
+        padding-bottom: 100px;
+
+        &__container {
+            display: flex;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+            background-color: #fff;
+            padding: 30px;
+            color: $dark;
+            width: 370px;
+            height: 120px;
+
+            &:hover {
+                color: $dark;
+            }
+
+            img {
+                margin-right: 14px;
+            }
+
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+
+        &__title {
+            font-weight: 500;
+        }
+
+        &__desc {
+            line-height: 21px;
+            font-size: 14px;
+        }
+    }
 }
