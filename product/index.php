@@ -138,7 +138,7 @@
 
 <div class="product-head"></div>
 
-<div class="product-wrapper">
+<section class="product-wrapper">
     <div class="product">
         <div class="product-main">
 
@@ -480,7 +480,268 @@
 
         </div>
     </div>
-</div>
+
+    <div class="product-offer">
+        <div class="product-offer__title">
+            Другие мусоровозы с задней загрузкой
+        </div>
+
+        <div class="product-offer__wrap">
+
+            <div class="catalog-output grid-view">
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="product-offer">
+        <div class="product-offer__title">
+            Не подходят мусоровозы с задней загрузкой?
+
+            <div class="product-offer__desc">
+                Посмотрите технику другого типа
+            </div>
+        </div>
+
+        <div class="product-offer__wrap">
+
+            <div class="catalog-output grid-view">
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+
+                <div class="catalog-item">
+                    <a href="javascript:void(0)">
+                        <div class="catalog-item__badges">
+                            <div class="catalog-item__badge">В наличии</div>
+                        </div>
+
+                        <div>
+                            <img src="<?php echo $path; ?>img/catalog/catalog-item1.jpg" alt="item">
+                        </div>
+
+                        <div class="catalog-item__text">
+                            <div class="catalog-item__model">КО-440В1</div>
+                            <div class="catalog-item__specifications">
+                                <div class="catalog-item__property">Тип загрузки</div>
+                                <div class="catalog-item__value">Задняя</div>
+
+                                <div class="catalog-item__property">Объем кузова</div>
+                                <div class="catalog-item__value">22 м³</div>
+
+                                <div class="catalog-item__property">Марка шасси</div>
+                                <div class="catalog-item__value">КАМАЗ</div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                    <button class="catalog-item__btn"><img src="<?php echo $path; ?>img/icons/compare.svg" alt="compare"> Сравнить</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- <footer class="footer green-footer">
     <div class="footer-group">
