@@ -1,12 +1,12 @@
 import * as $ from 'jquery'
 
 document.addEventListener("DOMContentLoaded", function () {
-    // mask
+    // маска для телефона
     function setCursorPosition(pos, elem) {
         elem.focus();
         if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
         else if (elem.createTextRange) {
-            var range = elem.createTextRange();
+            const range = elem.createTextRange();
             range.collapse(true);
             range.moveEnd("character", pos);
             range.moveStart("character", pos);
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function mask(event) {
-        var matrix = "+7 (___) ___ ____",
+        let matrix = "+7 (___) ___ ____",
             i = 0,
             def = matrix.replace(/\D/g, ""),
             val = this.value.replace(/\D/g, "");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.value.length == 2) this.value = ""
         } else setCursorPosition(this.value.length, this)
     };
-    var input = document.querySelector('input[type="tel"]');
+    const input = document.querySelector('input[type="tel"]');
     input.addEventListener("input", mask, false);
     input.addEventListener("focus", mask, false);
     input.addEventListener("blur", mask, false);
@@ -35,11 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 $(document).ready(function () {
-    // form test-drive
-    const form = $('.test-drive form'),
-        formSuccess = $('.test-drive-success'),
-        inputs = form.find('input:not([type="text"])');
-
+    // проверки и вывод сообщений
     const formAccepted = parent => {
         $(parent).removeClass('form_error');
         $(parent).addClass('form_accepted');
@@ -51,7 +47,7 @@ $(document).ready(function () {
         $(parent).find('.error_message').text(message);
     }
 
-    const checkTel = (input) => {
+    const checkTel = input => {
         const wrap = $(input).closest('.input'),
             inputLen = $(input).val().length;
 
@@ -67,7 +63,7 @@ $(document).ready(function () {
         }
     }
 
-    const checkEmail = (input) => {
+    const checkEmail = input => {
         const pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i,
             acceptPattern = $(input).val().search(pattern),
             wrap = $(input).closest('.input'),
@@ -85,7 +81,25 @@ $(document).ready(function () {
         }
     }
 
-    inputs.each(function (i, item) {
+    const checkText = input => {
+        const wrap = $(input).closest('.input'),
+            inputLen = $(input).val().length;
+
+        if (inputLen !== 0) {
+            formAccepted(wrap);
+            return true;
+        } else {
+            formError(wrap, 'Это поле нужно заполнить');
+            return false;
+        }
+    }
+
+    // форма тест-драйв
+    const tdForm = $('.test-drive form'),
+        tdFormSuccess = $('.test-drive-success'),
+        tdInputs = tdForm.find('input:not([type="text"])');
+
+    tdInputs.each(function (i, item) {
         const isTel = $(item).attr('type') == 'tel',
             isEmail = $(item).attr('type') == 'email';
 
@@ -98,9 +112,7 @@ $(document).ready(function () {
         })
     })
 
-
-
-    form.on('submit', function (e) {
+    tdForm.on('submit', function (e) {
         e.preventDefault();
 
         if (checkEmail($('#td_email')) && checkTel($('#td_tel'))) {
@@ -124,13 +136,74 @@ $(document).ready(function () {
                 success: function (res) {
                     console.log(res);
                     
-                    form.fadeOut(300, function () {
-                        formSuccess.fadeIn(300).css('display', 'flex');
+                    tdForm.fadeOut(300, function () {
+                        tdFormSuccess.fadeIn(300).css('display', 'flex');
                     });
 
                     setTimeout(() => {
-                        formSuccess.fadeOut(300, function () {
-                            form.fadeIn(300);
+                        tdFormSuccess.fadeOut(300, function () {
+                            tdForm.fadeIn(300);
+                        });
+                    }, 4000);
+                }
+            });
+        }
+    });
+
+    // форма заказа
+    const productForm = $('#product-modal form'),
+        productFormSuccess = $('#product-modal .product-modal-success'),
+        productInputs = productForm.find('input:not(#p_name)');
+
+    productInputs.each(function (i, item) {
+        const isTel = $(item).attr('type') == 'tel',
+            isEmail = $(item).attr('type') == 'email',
+            isText = $(item).attr('type') == 'text';
+
+        $(item).on('blur', function () {
+            if (isTel) {
+                checkTel(item);
+            } else if (isEmail) {
+                checkEmail(item);
+            } else if (isText) {
+                checkText(item);
+            }
+        })
+    })
+
+    productForm.on('submit', function (e) {
+        e.preventDefault();
+
+        if (checkEmail($('#p_email')) && checkTel($('#p_tel')) && checkText($('#p_company')) && checkText($('#p_region'))) {
+            const name = $('#p_name').val().trim(),
+                tel = $('#p_tel').val().trim(),
+                email = $('#p_email').val().trim(),
+                company = $('#p_company').val().trim(),
+                region = $('#p_region').val().trim(),
+                action = $(this).attr('action');
+
+            $.ajax({
+                url: action,
+                type: 'POST',
+                cache: false,
+                data: {
+                    'name': name,
+                    'email': email,
+                    'tel': tel,
+                    'company': company,
+                    'region': region
+                },
+                dataType: 'html',
+                success: function (res) {
+                    console.log(res);
+
+                    productForm.fadeOut(300, function () {
+                        productFormSuccess.fadeIn(300).css('display', 'flex');
+                    });
+
+                    setTimeout(() => {
+                        productFormSuccess.fadeOut(300, function () {
+                            productForm.fadeIn(300);
                         });
                     }, 4000);
                 }

@@ -212,7 +212,7 @@
             <div class="product-extra">Возможно установить на шасси марок: DAF, SCANIA, MAN</div>
 
             <!-- modal -->
-            <div id="product-modal" class="product-modal fade">
+            <div id="product-modal" class="product-modal">
                 <button id="product-modal-close" class="product-modal__close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
                         <g fill="none" fill-rule="evenodd" stroke-width="2">
