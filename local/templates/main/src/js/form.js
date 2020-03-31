@@ -40,18 +40,18 @@ $(document).ready(function () {
         formSuccess = $('.test-drive-success'),
         inputs = form.find('input:not([type="text"])');
 
-    function formAccepted(parent) {
+    const formAccepted = parent => {
         $(parent).removeClass('form_error');
         $(parent).addClass('form_accepted');
     }
 
-    function formError(parent, message) {
+    const formError = (parent, message) => {
         $(parent).removeClass('form_accepted');
         $(parent).addClass('form_error');
-        $('.error_message').text(message);
+        $(parent).find('.error_message').text(message);
     }
 
-    function checkTel(input) {
+    const checkTel = (input) => {
         const wrap = $(input).closest('.input'),
             inputLen = $(input).val().length;
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
         }
     }
 
-    function checkEmail(input) {
+    const checkEmail = (input) => {
         const pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i,
             acceptPattern = $(input).val().search(pattern),
             wrap = $(input).closest('.input'),

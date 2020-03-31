@@ -63,6 +63,7 @@
             justify-content: center;
             text-align: center;
             height: 100%;
+            padding-top: 135px;
 
             img {
                 height: 100px;
@@ -104,16 +105,11 @@
                 position: relative;
                 margin: 0;
                 width: 100%;
-
-                &[for="td_comment"] {
-                    width: calc(100% + 20px);
-                    margin-left: -20px;
-                }
             }
 
             .label {
                 position: absolute;
-                top: 34px;
+                top: 40px;
                 left: 0;
                 font-size: 14px;
                 color: $dark;
