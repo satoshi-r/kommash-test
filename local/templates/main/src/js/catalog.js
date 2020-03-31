@@ -43,4 +43,8 @@ $(document).ready(function () {
         }
     });
 
+    // очистить фильтр
+    $('#filter-clear').click(function () {
+        $('.catalog-filter input[type="checkbox"').prop('checked', false);        
+    })
 });

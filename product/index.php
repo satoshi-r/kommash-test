@@ -70,7 +70,7 @@
 
                         <div class="menu-production__container">
                             <div class="menu-production__column">
-                                <a class="menu-production__item">
+                                <a href="javascript:void(0)" class="menu-production__item">
                                     <img src="<?php echo $path; ?>img/first/vkh.png" alt="vkh">
                                     Техника для ВКХ
                                 </a>
@@ -83,7 +83,7 @@
                             </div>
 
                             <div class="menu-production__column">
-                                <a class="menu-production__item">
+                                <a href="../catalog/" class="menu-production__item">
                                     <img src="<?php echo $path; ?>img/first/musor.png" alt="vkh">
                                     Мусоровозы
                                 </a>
@@ -96,7 +96,7 @@
                             </div>
 
                             <div class="menu-production__column">
-                                <a class="menu-production__item">
+                                <a href="javascript:void(0)" class="menu-production__item">
                                     <img src="<?php echo $path; ?>img/first/kdm.png" alt="vkh">
                                     КДМ
                                 </a>
@@ -743,7 +743,7 @@
     </div>
 </section>
 
-<!-- <footer class="footer green-footer">
+<footer class="footer green-footer">
     <div class="footer-group">
         <span>© АО «КОММАШ», 2019</span>
         <a href="javascript:void(0)">Политика конфиденциальности</a>
@@ -755,7 +755,7 @@
     <div class="footer-group">
         <span>Сделано в «Воздухе»</span>
     </div>
-</footer> -->
+</footer>
 
 <!-- search -->
 <div class="header-search">
