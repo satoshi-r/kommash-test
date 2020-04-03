@@ -175,6 +175,7 @@
             width: 10px;
             height: 6px;
             margin-left: 10px;
+            margin-bottom: 2px;
             transition: all .1s ease;
         }
 
@@ -184,7 +185,7 @@
             display: none;
 
             li {
-                margin-bottom: 0;
+                margin-bottom: 10px;
 
                 a {
                     margin-bottom: 10px;

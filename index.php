@@ -232,7 +232,7 @@
     <div class="advantages-block advantages-block2">
         <div class="advantages-block__wrap">
             <div class="advantages-block__title">
-                <span>отлаженное</span> производство
+                <span>производство</span> отлаженное
             </div>
             <div>
                 <div class="advantages-block__lead">
@@ -249,7 +249,7 @@
     </div>
 
     <div class="advantages-block advantages-block3">
-        <img src="<?php echo $path; ?>img/advantages/advantages-block3.png" class="advantages-block__img" alt="machine">
+        <img src="<?php echo $path; ?>img/advantages/advantages-block3.jpg" class="advantages-block__img" alt="machine">
         <div class="advantages-block__wrap">
             <div>
                 <div class="advantages-block__lead">

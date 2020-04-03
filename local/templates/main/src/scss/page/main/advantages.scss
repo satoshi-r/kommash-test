@@ -10,14 +10,14 @@
         position: relative;
 
         &__img {
-            width: 100%;
+            width: 65%;
             display: block;
         }
 
         &__wrap {
             width: 630px;
             position: relative;
-            right: calc(50% - 482px);
+            right: calc(50% - 580px);
         }
 
         &__title {
@@ -48,7 +48,6 @@
                 line-height: normal;
                 position: relative;
                 top: 32px;
-                z-index: 2;
                 color: $accent;
                 font-size: 150px;
                 font-weight: 300;
@@ -69,6 +68,8 @@
 
         &__text {
             margin-bottom: 30px;
+            line-height: 30px;
+            font-size: 18px;
             opacity: 0;
             animation-duration: .8s;
         }
@@ -81,12 +82,17 @@
         }
     }
 
+    &-block1 {
+        z-index: 1;
+    }
+
     &-block2 {
         z-index: 2;
+        margin-top: -70px;
 
         .advantages-block {
             &__wrap {
-                left: calc(50% - 580px);
+                left: calc(50% - 620px);
             }
 
             &__lead {
@@ -121,7 +127,25 @@
 
             &__img {
                 margin-top: -200px;
+                max-width: 1000px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .advantages {
+        padding-top: 100px;
+
+        &-block1 {
+            margin-bottom: 80px;
+        }
+
+        &-block2 {
+            margin-bottom: 100px;
+        }
+
+        &-block3 {
         }
     }
 }
