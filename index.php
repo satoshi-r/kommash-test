@@ -232,7 +232,7 @@
     <div class="advantages-block advantages-block2">
         <div class="advantages-block__wrap">
             <div class="advantages-block__title">
-                <span>производство</span> отлаженное
+                отлаженное <span>производство</span>
             </div>
             <div>
                 <div class="advantages-block__lead">

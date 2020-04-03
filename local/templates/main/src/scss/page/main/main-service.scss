@@ -54,3 +54,14 @@
         }
     }
 }
+
+@media screen and (max-width: 1400px) {
+    .main-service-img {
+        width: 90%;
+
+        &__wrap {
+            width: 100%;
+        }
+    }
+    
+}

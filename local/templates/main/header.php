@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<title>Коммаш</title>
 	<meta name="description" content="kommash">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="shortcut icon" href="<?php echo $path; ?>img/favicon.ico">
 	<meta property="og:image" content="<?php echo $path; ?>img/preview.jpg">
 
