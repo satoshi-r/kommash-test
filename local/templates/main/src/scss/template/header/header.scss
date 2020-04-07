@@ -175,6 +175,7 @@
 
                 a {
                     color: $dark;
+                    transition: none;
 
                     &:hover {
                         border-bottom: 1px solid $dark;
