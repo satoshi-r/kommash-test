@@ -16,7 +16,7 @@ const gulp = require('gulp'),
 const isDev = process.env.NODE_ENV == 'development';
 
 const src = './';
-const phpPaths = '../../../../**/*.php';
+// const phpPaths = '../../../../**/*.php';
 const webpackConfig = {
 	output: {
 		filename: 'scripts.min.js'
@@ -46,13 +46,13 @@ const bsReload = (done => {
 });
 
 // Local Server
-gulp.task('browser-sync', () => {
-	browserSync({
-		proxy: 'kommash-test',
-		notify: false,
-		port: 4000
-	})
-});
+// gulp.task('browser-sync', () => {
+// 	browserSync({
+// 		proxy: 'kommash-test',
+// 		notify: false,
+// 		port: 4000
+// 	})
+// });
 
 // Styles
 gulp.task('styles:page', () => {
@@ -84,7 +84,7 @@ gulp.task('styles:page', () => {
 			}
 		})) // Optional. Comment out when debugging
 		.pipe(gulp.dest('../'))
-		.pipe(browserSync.stream())
+		// .pipe(browserSync.stream())
 });
 
 gulp.task('styles:template', () => {
@@ -118,7 +118,7 @@ gulp.task('styles:template', () => {
 			}
 		})) // Optional. Comment out when debugging
 		.pipe(gulp.dest('../'))
-		.pipe(browserSync.stream())
+		// .pipe(browserSync.stream())
 });
 
 // Scripts
@@ -129,9 +129,9 @@ gulp.task('scripts', () => {
 			title: 'webpack'
 		}))
 		.pipe(gulp.dest('../js'))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
+		// .pipe(browserSync.reload({
+		// 	stream: true
+		// }))
 });
 
 // Images
@@ -153,7 +153,7 @@ gulp.task('images', async () => {
 		.pipe(gulp.dest('../img'))
 });
 
-gulp.task('img', gulp.series('images', bsReload));
+// gulp.task('img', gulp.series('images', bsReload));
 
 // Clean IMG's
 gulp.task('cleanimg', () => {
@@ -163,12 +163,12 @@ gulp.task('cleanimg', () => {
 });
 
 // Code & Reload
-gulp.task('code', () => {
-	return gulp.src(phpPaths)
-		.pipe(browserSync.reload({
-			stream: true
-		}))
-});
+// gulp.task('code', () => {
+// 	return gulp.src(phpPaths)
+// 		.pipe(browserSync.reload({
+// 			stream: true
+// 		}))
+// });
 
 // Watch
 gulp.task('watch', () => {
@@ -176,10 +176,10 @@ gulp.task('watch', () => {
 	gulp.watch(src + 'scss/page/**/*.scss', gulp.parallel('styles:page'));
 	gulp.watch(src + 'scss/template/**/*.scss', gulp.parallel('styles:template'));
 	gulp.watch([src + 'js/*.js', `!${src}js/scripts.min.js`], gulp.parallel('scripts'));
-	gulp.watch(src + '*.html', gulp.parallel('code'));
-	gulp.watch(phpPaths, gulp.parallel('code'))
-	gulp.watch(src + 'img/**/*', gulp.parallel('img'));
+	// gulp.watch(src + '*.html', gulp.parallel('code'));
+	// gulp.watch(phpPaths, gulp.parallel('code'))
+	gulp.watch(src + 'img/**/*', gulp.parallel('images'));
 });
 
 gulp.task('build', gulp.parallel('scripts'))
-gulp.task('default', gulp.parallel('img', 'styles:page', 'styles:template', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('images', 'styles:page', 'styles:template', 'scripts', 'watch'));

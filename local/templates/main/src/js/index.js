@@ -8,7 +8,8 @@ import './product-slider'
 import './product'
 
 
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function name() {
     // запрет на вытягивание картинок
     $("img, a").on("dragstart", function (event) { event.preventDefault(); });
 });
+    
