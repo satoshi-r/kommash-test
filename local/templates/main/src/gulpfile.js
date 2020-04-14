@@ -3,6 +3,7 @@ const gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	concat = require('gulp-concat'),
 	cleancss = require('gulp-clean-css'),
+	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
 	newer = require('gulp-newer'),
 	rename = require('gulp-rename'),
@@ -60,6 +61,7 @@ gulp.task('styles:page', () => {
 		src + 'scss/vars.scss',
 		src + 'scss/page/**/*.scss'
 	])
+		.pipe(sourcemaps.init())
 		.pipe(concat('styles.scss'))
 		.pipe(sass({
 			outputStyle: 'expanded',
@@ -83,6 +85,7 @@ gulp.task('styles:page', () => {
 				}
 			}
 		})) // Optional. Comment out when debugging
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('../'))
 		// .pipe(browserSync.stream())
 });
@@ -94,6 +97,7 @@ gulp.task('styles:template', () => {
 		src + 'scss/template/base/**/*.scss',
 		src + 'scss/template/**/*.scss'
 	])
+		.pipe(sourcemaps.init())
 		.pipe(concat('template_styles.scss'))
 		.pipe(sass({
 			outputStyle: 'expanded',
@@ -117,6 +121,7 @@ gulp.task('styles:template', () => {
 				}
 			}
 		})) // Optional. Comment out when debugging
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('../'))
 		// .pipe(browserSync.stream())
 });
