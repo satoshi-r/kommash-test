@@ -2,30 +2,9 @@ import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-// https://webformyself.com/pdfmake-prostoe-sozdanie-pdf-dokumentov-ispolzuya-javascript/
-
-const catalog = [{
-        model: 'KO-440B1-01',
-        loading: 'back',
-        chassis: 'КАМАЗ',
-        volume: '22м',
-        wasteMass: '5375кг'
-    },
-    {
-        model: 'KO-440B1',
-        loading: 'back',
-        chassis: 'КАМАЗ',
-        volume: '22м',
-        wasteMass: '5375кг'
-    },
-    {
-        model: 'KO-440K20',
-        loading: 'back',
-        chassis: 'КАМАЗ',
-        volume: '22м',
-        wasteMass: '5375кг'
-    }
-]
+// видос https://webformyself.com/pdfmake-prostoe-sozdanie-pdf-dokumentov-ispolzuya-javascript/
+// примеры https://github.com/bpampuch/pdfmake/tree/0.1/examples
+// дока https://pdfmake.github.io/docs/getting-started/client-side/
 
 const docInfo = {
     info: {
