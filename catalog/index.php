@@ -204,6 +204,8 @@
                 </label>
             </form>
 
+            <button class="btn" id="open-pdf">Открыть PDF</button>
+
             <div class="catalog-print" onclick="document.print()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                     <path d="M17 2l-.001 2H20v12.01h-3.001L17 18H3l-.001-1.99H0V4h2.999L3 2h14zM4 17h12v-5H4v5zm11-2v1H5v-1h10zm3-9H2v8.01h.999L3 11h14l-.001 3.01H18V6zm-3 7v1H5v-1h10zm1-5v1h-1V8h1zm0-5H4v1h12V3z" />

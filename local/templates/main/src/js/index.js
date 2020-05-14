@@ -6,6 +6,7 @@ import './forms'
 import './catalog'
 import './product-slider'
 import './product'
+import './pdf'
 
 
 $(document).ready(function name() {
